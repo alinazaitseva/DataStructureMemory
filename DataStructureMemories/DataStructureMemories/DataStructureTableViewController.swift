@@ -8,28 +8,25 @@
 
 import UIKit
 
-class DataStructureTableViewController: UITableViewController {
+class DataStructureTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var memoryList = ["Stack","Queue","Set","Dequeue","Priority Queue","List(Array)", "MultiSet","Dictionary"]
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memoryList.count
     }
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        cell.textLabel?.text = memoryList[indexPath.row]
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath) as! DataStructureCell
+        
+        cell.titleLabel.text = memoryList[indexPath.row]
+        
         return cell
     }
- 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Section \(section)"
     }
     
