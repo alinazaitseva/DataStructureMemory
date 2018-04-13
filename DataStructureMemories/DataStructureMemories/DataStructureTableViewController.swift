@@ -15,21 +15,21 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableView.separatorColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         return dataStructureManipulatios.getAmountOfValuesInDataSorce()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath) as? DataStructureCell {
-        
             cell.titleLabel.text = dataStructureManipulatios.getValueInDataSource(item: indexPath.row)
-        
             return cell
-            
         } else {
             return tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath)
         }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -37,8 +37,12 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
         print(indexPath.row)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
+    func setUpUIColor(color: UIColor, for tableView: UITableView) {
+         tableView.separatorColor = color
+    }
+    
+    override func viewDidLoad() {
+        setUpUIColor(color: UIColor.black, for: self.tableView)
     }
     
 }
