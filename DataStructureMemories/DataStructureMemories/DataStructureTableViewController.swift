@@ -10,30 +10,35 @@ import UIKit
 
 class DataStructureTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let dataStructureManipulatios = DataCaprureMemoryStructModel()
+    let dataStructureManipulatios = DataCaptureMemoryStructModel()
     
     @IBOutlet weak var tableView: UITableView!
-    
-//    var memoryList = ["Stack","Queue","Set","Dequeue","Priority Queue","List(Array)", "MultiSet","Dictionary"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableView.separatorColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         return dataStructureManipulatios.getAmountOfValuesInDataSorce()
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath) as! DataStructureCell
         
-        cell.titleLabel.text = dataStructureManipulatios.getValueInDataSource(item: indexPath.row)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath) as? DataStructureCell {
         
-//        cell.titleLabel.text = memoryList[indexPath.row]
+            cell.titleLabel.text = dataStructureManipulatios.getValueInDataSource(item: indexPath.row)
         
-        return cell
+            return cell
+            
+        } else {
+            return tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath)
+        }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print(indexPath.row)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
 }

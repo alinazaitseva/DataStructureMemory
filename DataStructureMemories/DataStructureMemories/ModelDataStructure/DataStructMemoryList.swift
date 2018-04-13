@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataCaprureMemoryStructModel: DataStructureMemorySorce{
+class DataCaptureMemoryStructModel: DataStructureMemorySource{
     
     var listOfDataStructure: [String] {
         

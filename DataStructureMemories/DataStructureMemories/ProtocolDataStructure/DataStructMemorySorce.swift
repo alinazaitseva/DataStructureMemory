@@ -8,9 +8,7 @@
 
 import Foundation
 
-protocol DataStructureMemorySorce {
-    
-    var listOfDataStructure: [String] { get }
+protocol DataStructureMemorySource {
     
     func getValueInDataSource(item: Int) -> String
     
