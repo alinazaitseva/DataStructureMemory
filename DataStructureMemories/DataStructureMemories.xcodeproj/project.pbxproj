@@ -11,6 +11,8 @@
 		CE0DE1B5207F77AD0031F233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0DE1B3207F77AD0031F233 /* Main.storyboard */; };
 		CE0DE1B7207F77AD0031F233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0DE1B6207F77AD0031F233 /* Assets.xcassets */; };
 		CE0DE1BA207F77AD0031F233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0DE1B8207F77AD0031F233 /* LaunchScreen.storyboard */; };
+		CE65A6F42080B702003FB1E7 /* DataStructMemorySorce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */; };
+		CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */; };
 		CECDDECB207F8EFB0072B383 /* DataStructureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */; };
 		CECDDECD207FAB830072B383 /* DataStructureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDDECC207FAB830072B383 /* DataStructureCell.swift */; };
 /* End PBXBuildFile section */
@@ -22,6 +24,8 @@
 		CE0DE1B6207F77AD0031F233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0DE1B9207F77AD0031F233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0DE1BB207F77AD0031F233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemorySorce.swift; sourceTree = "<group>"; };
+		CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemoryList.swift; sourceTree = "<group>"; };
 		CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableViewController.swift; sourceTree = "<group>"; };
 		CECDDECC207FAB830072B383 /* DataStructureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,15 +60,41 @@
 		CE0DE1AE207F77AD0031F233 /* DataStructureMemories */ = {
 			isa = PBXGroup;
 			children = (
-				CE0DE1AF207F77AD0031F233 /* AppDelegate.swift */,
+				CE65A6F92080BC7A003FB1E7 /* ProtocolDataStructure */,
+				CE65A6F82080BC6C003FB1E7 /* ModelDataStructure */,
 				CE0DE1B3207F77AD0031F233 /* Main.storyboard */,
 				CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */,
 				CECDDECC207FAB830072B383 /* DataStructureCell.swift */,
-				CE0DE1B6207F77AD0031F233 /* Assets.xcassets */,
-				CE0DE1B8207F77AD0031F233 /* LaunchScreen.storyboard */,
+				CE65A6F22080B661003FB1E7 /* Supporting files */,
 				CE0DE1BB207F77AD0031F233 /* Info.plist */,
 			);
 			path = DataStructureMemories;
+			sourceTree = "<group>";
+		};
+		CE65A6F22080B661003FB1E7 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0DE1AF207F77AD0031F233 /* AppDelegate.swift */,
+				CE0DE1B6207F77AD0031F233 /* Assets.xcassets */,
+				CE0DE1B8207F77AD0031F233 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		CE65A6F82080BC6C003FB1E7 /* ModelDataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */,
+			);
+			path = ModelDataStructure;
+			sourceTree = "<group>";
+		};
+		CE65A6F92080BC7A003FB1E7 /* ProtocolDataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */,
+			);
+			path = ProtocolDataStructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */,
 				CE0DE1B0207F77AD0031F233 /* AppDelegate.swift in Sources */,
 				CECDDECD207FAB830072B383 /* DataStructureCell.swift in Sources */,
+				CE65A6F42080B702003FB1E7 /* DataStructMemorySorce.swift in Sources */,
 				CECDDECB207F8EFB0072B383 /* DataStructureTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

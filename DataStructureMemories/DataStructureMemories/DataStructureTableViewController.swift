@@ -15,6 +15,9 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
     var memoryList = ["Stack","Queue","Set","Dequeue","Priority Queue","List(Array)", "MultiSet","Dictionary"]
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        tableView.separatorColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
         return memoryList.count
     }
 
