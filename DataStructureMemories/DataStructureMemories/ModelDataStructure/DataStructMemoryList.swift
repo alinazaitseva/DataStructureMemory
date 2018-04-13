@@ -9,7 +9,6 @@
 import Foundation
 
 class DataCaprureMemoryStructModel: DataStructureMemorySorce{
-
     
     var listOfDataStructure: [String] {
         
@@ -17,16 +16,11 @@ class DataCaprureMemoryStructModel: DataStructureMemorySorce{
     }
     
     func getValueInDataSource( item: Int ) -> String {
-      
         return listOfDataStructure[item]
-        
     }
     
-    func amountOfValuesInDataSorce() -> Int {
-        <#code#>
+    func getAmountOfValuesInDataSorce() -> Int {
+      return listOfDataStructure.count
     }
-    
-    
-
     
 }

@@ -14,7 +14,7 @@ protocol DataStructureMemorySorce {
     
     func getValueInDataSource(item: Int) -> String
     
-    func amountOfValuesInDataSorce() -> Int
+    func getAmountOfValuesInDataSorce() -> Int
 
 }
 
