@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataCaptureMemoryStructModel: DataStructureMemorySource{
+class DataStructMemoryList: DataStructureMemorySource{
     
     var listOfDataStructure: [String] {
         

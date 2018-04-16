@@ -10,7 +10,7 @@ import UIKit
 
 class DataStructureTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let dataStructureManipulatios = DataCaptureMemoryStructModel()
+    let dataStructureManipulatios = DataStructMemoryList()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,20 +21,29 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath) as? DataStructureCell {
+            
             cell.titleLabel.text = dataStructureManipulatios.getValueInDataSource(item: indexPath.row)
+            
             return cell
         } else {
             return tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath)
         }
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print(indexPath.row)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailViewController = storyboard.instantiateViewController(withIdentifier:  "DetailViewController") as! DetailViewController
+        detailViewController.myTitle = dataStructureManipulatios.getValueInDataSource(item: indexPath.row)
+        
+        self.navigationController?.pushViewController(detailViewController, animated: false)
+        
     }
     
     func setUpUIColor(color: UIColor, for tableView: UITableView) {
@@ -44,5 +53,7 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
     override func viewDidLoad() {
         setUpUIColor(color: UIColor.black, for: self.tableView)
     }
+    
+    
     
 }
