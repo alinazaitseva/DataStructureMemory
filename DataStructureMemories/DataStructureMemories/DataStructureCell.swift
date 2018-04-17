@@ -13,12 +13,9 @@ class DataStructureCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
-extension DataStructureCell: ConfigurableCell {
-    
-    func configure(value: String, model: DataStructureCell) {
-       
-        
-        
-    }
-    
-}
+//extension DataStructureCell: ConfigurableCell {
+//    func configure(_ model: DataStructureCell) {
+//    
+//    }
+//}
+

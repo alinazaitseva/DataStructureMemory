@@ -40,6 +40,7 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailViewController = storyboard.instantiateViewController(withIdentifier:  "DetailViewController") as! DetailViewController
+        
         detailViewController.myTitle = dataStructureManipulatios.getValueInDataSource(item: indexPath.row)
         
         self.navigationController?.pushViewController(detailViewController, animated: false)
