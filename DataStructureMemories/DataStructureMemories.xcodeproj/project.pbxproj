@@ -71,8 +71,7 @@
 				CE65A6F92080BC7A003FB1E7 /* ProtocolDataStructure */,
 				CE65A6F82080BC6C003FB1E7 /* ModelDataStructure */,
 				CE0DE1B3207F77AD0031F233 /* Main.storyboard */,
-				CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */,
-				CE674F6A2084CE1000E18E5E /* DetailViewController.swift */,
+				CEA4A4B620873A8C0005CA13 /* ControllerDataStructure */,
 				CECDDECC207FAB830072B383 /* DataStructureCell.swift */,
 				CE65A6F22080B661003FB1E7 /* Supporting files */,
 				CE0DE1BB207F77AD0031F233 /* Info.plist */,
@@ -107,6 +106,15 @@
 				CE53572B2086014A003D98AF /* DataStructMemory.swift */,
 			);
 			path = ProtocolDataStructure;
+			sourceTree = "<group>";
+		};
+		CEA4A4B620873A8C0005CA13 /* ControllerDataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */,
+				CE674F6A2084CE1000E18E5E /* DetailViewController.swift */,
+			);
+			path = ControllerDataStructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

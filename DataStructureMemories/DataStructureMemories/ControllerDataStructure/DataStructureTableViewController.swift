@@ -42,9 +42,9 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
         let detailViewController = storyboard.instantiateViewController(withIdentifier:  "DetailViewController") as! DetailViewController
         
         detailViewController.myTitle = dataStructureManipulatios.getValueInDataSource(item: indexPath.row)
+        detailViewController.detailDescription = dataStructureManipulatios.descriptOfDataStructure[indexPath.row]
         
         self.navigationController?.pushViewController(detailViewController, animated: false)
-        
     }
     
     func setUpUIColor(color: UIColor, for tableView: UITableView) {
@@ -54,7 +54,5 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
     override func viewDidLoad() {
         setUpUIColor(color: UIColor.black, for: self.tableView)
     }
-    
-    
     
 }
