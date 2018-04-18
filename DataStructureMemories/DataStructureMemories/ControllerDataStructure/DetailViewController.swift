@@ -12,13 +12,13 @@ class DetailViewController: UIViewController {
     
    @IBOutlet weak var descriptionValue: UILabel!
     
-    public var myTitle: String?
+    public var titleStructure: String?
     public var detailDescription: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = myTitle ?? ""
-        self.descriptionValue.text = detailDescription ?? ""
+        self.title = titleStructure ?? "There is no such title"
+        self.descriptionValue.text = detailDescription ?? "There is no such description"
     }
     
     override func didReceiveMemoryWarning() {
