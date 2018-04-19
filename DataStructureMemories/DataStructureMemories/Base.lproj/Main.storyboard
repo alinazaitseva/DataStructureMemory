@@ -108,7 +108,7 @@
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="buttonShowText:" destination="noo-0f-SbK" eventType="touchUpInside" id="a7o-e5-YZN"/>
+                                                            <action selector="buttonShowText:" destination="noo-0f-SbK" eventType="touchUpInside" id="Cro-E2-EBm"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -152,7 +152,6 @@
                         <outlet property="gradientView" destination="Y6b-jV-h5q" id="WM1-EF-EK3"/>
                         <outlet property="halfHeightConstraint" destination="Dif-Q5-8gK" id="Oh2-mw-BDR"/>
                         <outlet property="heightConstraint" destination="uiE-Sw-UCh" id="D4W-xa-ALE"/>
-                        <outlet property="hiddenHeightConstraint" destination="bLN-H4-chb" id="cUF-lq-hfa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhQ-dK-VOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
