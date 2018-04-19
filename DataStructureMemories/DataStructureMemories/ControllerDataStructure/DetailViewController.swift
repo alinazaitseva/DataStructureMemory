@@ -13,11 +13,12 @@ class DetailViewController: UIViewController {
     
     public var titleStructure: String?
     public var detailDescription: String?
+    public var srtuctureCell: DataStructMemory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = titleStructure ?? "There is no such title"
-        self.descriptionValue.text = detailDescription ?? "There is no such description"
+        self.title = srtuctureCell?.titleOfString() ?? "There is no such title"
+        self.descriptionValue.text = srtuctureCell?.descrOfstring() ?? "There is no such description"
         gradientView.opacityGradient()
     }
     override func didReceiveMemoryWarning() {
@@ -54,7 +55,6 @@ class DetailViewController: UIViewController {
         }, completion: nil)
     }
 }
-
 extension UIView {
     func opacityGradient() {
         let gradient = CAGradientLayer()

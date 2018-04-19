@@ -40,9 +40,10 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailViewController = storyboard.instantiateViewController(withIdentifier:  "DetailViewController") as! DetailViewController
+        let cellEnt = DataStructEntity(title: dataStructureManipulatios.getValueInDataSource(item: indexPath.row), description: dataStructureManipulatios.descriptOfDataStructure[indexPath.row])
         
-        detailViewController.titleStructure = dataStructureManipulatios.getValueInDataSource(item: indexPath.row)
-        detailViewController.detailDescription = dataStructureManipulatios.descriptOfDataStructure[indexPath.row]
+        detailViewController.srtuctureCell = cellEnt
+        
         
         self.navigationController?.pushViewController(detailViewController, animated: false)
     }
