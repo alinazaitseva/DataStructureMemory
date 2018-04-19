@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -96,11 +97,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6b-jV-h5q">
-                                                <rect key="frame" x="0.0" y="245.33333333333329" width="414" height="122.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="245" width="414" height="123"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-lF-eVB">
-                                                        <rect key="frame" x="170" y="80" width="74" height="42.666666666666657"/>
+                                                        <rect key="frame" x="170" y="80" width="74" height="43"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -126,9 +127,25 @@
                                             <constraint firstItem="y8o-pI-Xef" firstAttribute="top" secondItem="p03-YX-34i" secondAttribute="top" id="qtg-Qa-BXj"/>
                                         </constraints>
                                     </view>
+                                    <button hidden="YES" opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eip-gk-fAY">
+                                        <rect key="frame" x="363" y="368" width="43" height="43"/>
+                                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="2xJ-tc-ida"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Less">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonHideText:" destination="noo-0f-SbK" eventType="touchUpInside" id="BiB-H0-rZo"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="eip-gk-fAY" firstAttribute="trailing" secondItem="s3K-7o-f8w" secondAttribute="trailingMargin" id="33c-hK-H8u"/>
                                     <constraint firstAttribute="bottom" secondItem="p03-YX-34i" secondAttribute="bottom" id="Koj-dP-Wl8"/>
+                                    <constraint firstItem="eip-gk-fAY" firstAttribute="top" secondItem="p03-YX-34i" secondAttribute="bottom" id="Skh-pO-ldg"/>
                                     <constraint firstItem="p03-YX-34i" firstAttribute="leading" secondItem="s3K-7o-f8w" secondAttribute="leading" id="VrD-U1-BBf"/>
                                     <constraint firstAttribute="trailing" secondItem="p03-YX-34i" secondAttribute="trailing" id="dWM-Fb-Q2T"/>
                                     <constraint firstItem="p03-YX-34i" firstAttribute="top" secondItem="s3K-7o-f8w" secondAttribute="top" id="vFr-m6-v80"/>
@@ -148,6 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="jtL-en-tep"/>
                     </view>
                     <connections>
+                        <outlet property="buttonLess" destination="eip-gk-fAY" id="nQJ-Tz-iD7"/>
                         <outlet property="buttonMore" destination="aNf-lF-eVB" id="LsI-iH-HBD"/>
                         <outlet property="descriptionValue" destination="y8o-pI-Xef" id="X0f-QG-MSQ"/>
                         <outlet property="fullHeightConstraint" destination="1lB-7v-mj3" id="2gW-DI-iDm"/>

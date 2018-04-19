@@ -35,6 +35,14 @@ class DetailViewController: UIViewController {
     @IBAction func buttonShowText(_ sender: Any) {
         heightConstraint.priority = UILayoutPriority(rawValue: 250)
         gradientView.isHidden = true
+        buttonLess.isHidden = false
+        view.layoutIfNeeded()
+    }
+    @IBOutlet weak var buttonLess: UIButton!
+    
+    @IBAction func buttonHideText(_ sender: Any) {
+        heightConstraint.priority = UILayoutPriority(rawValue: 999)
+        gradientView.isHidden = false
         view.layoutIfNeeded()
     }
     
@@ -46,6 +54,7 @@ class DetailViewController: UIViewController {
         }, completion: nil)
     }
 }
+
 extension UIView {
     func opacityGradient() {
         let gradient = CAGradientLayer()
