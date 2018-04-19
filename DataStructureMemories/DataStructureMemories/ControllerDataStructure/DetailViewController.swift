@@ -37,6 +37,14 @@ class DetailViewController: UIViewController {
         gradientView.isHidden = true
         view.layoutIfNeeded()
     }
+    
+    @IBOutlet weak var buttonMore: UIButton!
+    
+    @IBAction func animateButtonMore(_ sender: UIButton) {
+        UIView.animate(withDuration: 1.6, animations: {
+            self.buttonMore.frame.origin.y -= 20
+        }, completion: nil)
+    }
 }
 extension UIView {
     func opacityGradient() {

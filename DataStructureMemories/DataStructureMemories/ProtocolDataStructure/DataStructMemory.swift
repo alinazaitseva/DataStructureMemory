@@ -10,8 +10,8 @@ import Foundation
 
 protocol DataStructMemory {
     
-    func returnTitleOfString() -> String
+    func titleOfString() -> String
     
-    func returnDescrOfstring() -> String
+    func descrOfstring() -> String
     
 }

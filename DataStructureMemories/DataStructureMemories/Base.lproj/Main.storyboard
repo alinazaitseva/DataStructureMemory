@@ -108,6 +108,7 @@
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="animateButtonMore:" destination="noo-0f-SbK" eventType="touchUpInside" id="Gqu-Nv-olp"/>
                                                             <action selector="buttonShowText:" destination="noo-0f-SbK" eventType="touchUpInside" id="Cro-E2-EBm"/>
                                                         </connections>
                                                     </button>
@@ -147,6 +148,7 @@
                         <viewLayoutGuide key="safeArea" id="jtL-en-tep"/>
                     </view>
                     <connections>
+                        <outlet property="buttonMore" destination="aNf-lF-eVB" id="LsI-iH-HBD"/>
                         <outlet property="descriptionValue" destination="y8o-pI-Xef" id="X0f-QG-MSQ"/>
                         <outlet property="fullHeightConstraint" destination="1lB-7v-mj3" id="2gW-DI-iDm"/>
                         <outlet property="gradientView" destination="Y6b-jV-h5q" id="WM1-EF-EK3"/>

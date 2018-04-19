@@ -13,11 +13,11 @@ class DataStructEntity: DataStructMemory {
     private let title: String
     private let descr: String
     
-    func returnTitleOfString() -> String {
+    func titleOfString() -> String {
         return title.self
     }
     
-    func returnDescrOfstring() -> String {
+    func descrOfstring() -> String {
         return descr.self
     }
     
