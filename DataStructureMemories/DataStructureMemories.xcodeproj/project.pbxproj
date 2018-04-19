@@ -68,9 +68,9 @@
 		CE0DE1AE207F77AD0031F233 /* DataStructureMemories */ = {
 			isa = PBXGroup;
 			children = (
+				CE0DE1B3207F77AD0031F233 /* Main.storyboard */,
 				CE65A6F92080BC7A003FB1E7 /* ProtocolDataStructure */,
 				CE65A6F82080BC6C003FB1E7 /* ModelDataStructure */,
-				CE0DE1B3207F77AD0031F233 /* Main.storyboard */,
 				CEA4A4B620873A8C0005CA13 /* ControllerDataStructure */,
 				CECDDECC207FAB830072B383 /* DataStructureCell.swift */,
 				CE65A6F22080B661003FB1E7 /* Supporting files */,
