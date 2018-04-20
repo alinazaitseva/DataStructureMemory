@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     public var detailDescription: String?
     public var srtuctureCell: DataStructMemory?
    
-    var isDoing = false
+    var isShowingText = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,19 +37,23 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     @IBAction func buttonShowText(_ sender: Any) {
-        let hideText = heightConstraint.priority = UILayoutPriority(rawValue: 250)
-        gradientView.isHidden = true
-        view.layoutIfNeeded()
+        
         let titleMore = "More"
         let titleLess = "Less"
-         buttonToggle.setTitle(titleLess, for: UIControlState.normal)
-//        if isDoing {
-//
-//
-//        }
+        if self.isShowingText {
+            self.buttonToggle.setTitle(titleMore, for: UIControlState.normal)
+            self.isShowingText = false
+            self.heightConstraint.priority = UILayoutPriority(rawValue: 999)
+            self.gradientView.isHidden = false
+        } else {
+            self.buttonToggle.setTitle(titleLess, for: UIControlState.normal)
+            self.isShowingText = true
+            self.heightConstraint.priority = UILayoutPriority(rawValue: 250)
+            self.gradientView.isHidden = true
+        }
+        view.layoutIfNeeded()
     
     }
-    
     
     @IBAction func animateButtonMore(_ sender: UIButton) {
         UIView.animate(withDuration: 1.6, animations: {
@@ -58,11 +62,6 @@ class DetailViewController: UIViewController {
         view.layoutIfNeeded()
     }
 }
-//    @IBAction func buttonHideText(_ sender: Any) {
-//        heightConstraint.priority = UILayoutPriority(rawValue: 999)
-//        gradientView.isHidden = false
-//        view.layoutIfNeeded()
-//    }
 
 extension UIView {
     func opacityGradient() {

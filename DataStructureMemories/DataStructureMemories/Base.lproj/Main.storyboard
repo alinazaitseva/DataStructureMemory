@@ -95,21 +95,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-lF-eVB">
-                                                <rect key="frame" x="170" y="165" width="74" height="38"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.081092710750000005" green="0.081895608879999998" blue="0.081895608879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
-                                                </accessibility>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                <state key="normal" title="More">
-                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="buttonShowText:" destination="noo-0f-SbK" eventType="touchUpInside" id="Cro-E2-EBm"/>
-                                                </connections>
-                                            </button>
                                             <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6b-jV-h5q">
                                                 <rect key="frame" x="0.0" y="245" width="414" height="123"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -125,9 +110,25 @@
                                             <constraint firstItem="y8o-pI-Xef" firstAttribute="top" secondItem="p03-YX-34i" secondAttribute="top" id="qtg-Qa-BXj"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-lF-eVB">
+                                        <rect key="frame" x="367" y="330" width="47" height="38"/>
+                                        <color key="backgroundColor" red="0.081092710750000005" green="0.081895608879999998" blue="0.081895608879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="More">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonShowText:" destination="noo-0f-SbK" eventType="touchUpInside" id="Cro-E2-EBm"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="p03-YX-34i" secondAttribute="bottom" id="Koj-dP-Wl8"/>
+                                    <constraint firstAttribute="bottom" secondItem="aNf-lF-eVB" secondAttribute="bottom" id="Lzx-Vq-2CZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="aNf-lF-eVB" secondAttribute="trailing" id="QVl-oF-ODe"/>
                                     <constraint firstItem="p03-YX-34i" firstAttribute="leading" secondItem="s3K-7o-f8w" secondAttribute="leading" id="VrD-U1-BBf"/>
                                     <constraint firstAttribute="trailing" secondItem="p03-YX-34i" secondAttribute="trailing" id="dWM-Fb-Q2T"/>
                                     <constraint firstItem="p03-YX-34i" firstAttribute="top" secondItem="s3K-7o-f8w" secondAttribute="top" id="vFr-m6-v80"/>
