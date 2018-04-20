@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var halfHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var fullHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var buttonToggle: UIButton!
     @IBOutlet weak var buttonWiki: UIButton!
@@ -38,19 +39,36 @@ class DetailViewController: UIViewController {
     @IBAction func buttonShowText(_ sender: Any) {
         let titleMore = "More"
         let titleLess = "Less"
-        if self.isShowingText {
-            self.buttonToggle.setTitle(titleMore, for: UIControlState.normal)
-            self.isShowingText = false
-            self.heightConstraint.priority = UILayoutPriority(rawValue: 999)
-            self.gradientView.isHidden = false
+        if isShowingText {
+            UIView.transition(with: scrollView, duration: 0.6, options: .transitionCrossDissolve, animations: {
+                self.buttonToggle.setTitle(titleMore, for: UIControlState.normal)
+                self.isShowingText = false
+                self.heightConstraint.priority = UILayoutPriority(rawValue: 999)
+                self.gradientView.isHidden = false
+            })
         } else {
-            self.buttonToggle.setTitle(titleLess, for: UIControlState.normal)
-            self.isShowingText = true
-            self.heightConstraint.priority = UILayoutPriority(rawValue: 250)
-            self.gradientView.isHidden = true
-            
+            UIView.transition(with: scrollView, duration: 0.6, options: .transitionCrossDissolve, animations: {
+                self.buttonToggle.setTitle(titleLess, for: UIControlState.normal)
+                self.isShowingText = true
+                self.heightConstraint.priority = UILayoutPriority(rawValue: 250)
+                self.gradientView.isHidden = true
+            })
         }
         view.layoutIfNeeded()
+    }
+//    let actionSheet = AFMActionSheetController()
+//    let action = AFMAction(title: "Action", enabled: true, handler: { (action: AFMAction) -> Void in
+//        // Do something in handler
+//    }
+//        actionSheet.add(action)
+//        self.present(actionSheet, animated: true, completion: {
+//        // Do something after completion
+//        })
+//
+//    let actionSheet: UIAController = UIAlertController(title: "Please select", preferredStyle: .actionSheet)
+    
+    @IBAction func downloadSheet(_ sender: AnyObject) {
+    
     }
     
     @IBAction func animateButtonMore(_ sender: UIButton) {

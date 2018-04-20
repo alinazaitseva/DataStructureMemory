@@ -134,6 +134,9 @@
                                         <state key="normal" title="Wiki">
                                             <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="downloadSheet:" destination="noo-0f-SbK" eventType="touchUpInside" id="ual-xh-alh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -168,6 +171,7 @@
                         <outlet property="gradientView" destination="Y6b-jV-h5q" id="WM1-EF-EK3"/>
                         <outlet property="halfHeightConstraint" destination="Dif-Q5-8gK" id="Oh2-mw-BDR"/>
                         <outlet property="heightConstraint" destination="uiE-Sw-UCh" id="D4W-xa-ALE"/>
+                        <outlet property="scrollView" destination="s3K-7o-f8w" id="zWz-MN-iqw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhQ-dK-VOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
