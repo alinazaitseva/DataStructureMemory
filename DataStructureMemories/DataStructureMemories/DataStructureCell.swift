@@ -18,7 +18,7 @@ extension DataStructureCell: ConfigurableCell {
     
     func configure(_ model: DataStructEntity) {
         
-        titleLabel.text = model.returnTitleOfString()
+        titleLabel.text = model.titleOfString()
     }
     
     
