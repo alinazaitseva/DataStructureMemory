@@ -9,11 +9,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-   @IBOutlet weak var descriptionValue: UILabel!
+    @IBOutlet weak var descriptionValue: UILabel!
+    @IBOutlet weak var buttonToggle: UIButton!
     
     public var titleStructure: String?
     public var detailDescription: String?
     public var srtuctureCell: DataStructMemory?
+   
+    var isDoing = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,27 +37,33 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     @IBAction func buttonShowText(_ sender: Any) {
-        heightConstraint.priority = UILayoutPriority(rawValue: 250)
+        let hideText = heightConstraint.priority = UILayoutPriority(rawValue: 250)
         gradientView.isHidden = true
-        buttonLess.isHidden = false
         view.layoutIfNeeded()
-    }
-    @IBOutlet weak var buttonLess: UIButton!
+        let titleMore = "More"
+        let titleLess = "Less"
+         buttonToggle.setTitle(titleLess, for: UIControlState.normal)
+//        if isDoing {
+//
+//
+//        }
     
-    @IBAction func buttonHideText(_ sender: Any) {
-        heightConstraint.priority = UILayoutPriority(rawValue: 999)
-        gradientView.isHidden = false
-        view.layoutIfNeeded()
     }
     
-    @IBOutlet weak var buttonMore: UIButton!
     
     @IBAction func animateButtonMore(_ sender: UIButton) {
         UIView.animate(withDuration: 1.6, animations: {
-            self.buttonMore.frame.origin.y -= 20
+            self.buttonToggle.frame.origin.y -= 20
         }, completion: nil)
+        view.layoutIfNeeded()
     }
 }
+//    @IBAction func buttonHideText(_ sender: Any) {
+//        heightConstraint.priority = UILayoutPriority(rawValue: 999)
+//        gradientView.isHidden = false
+//        view.layoutIfNeeded()
+//    }
+
 extension UIView {
     func opacityGradient() {
         let gradient = CAGradientLayer()
@@ -62,5 +71,13 @@ extension UIView {
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gradient.locations = [0.0, 1.0]
         self.layer.mask = gradient
+    }
+}
+
+extension UIButton {
+    func setTitle(_ title: String) {
+        self.setTitle(title, for: .normal)
+        self.setTitle(title, for: .disabled)
+        self.setTitle(title, for: .focused)
     }
 }
