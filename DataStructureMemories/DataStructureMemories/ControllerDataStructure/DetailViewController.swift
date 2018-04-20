@@ -10,34 +10,32 @@ import UIKit
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var descriptionValue: UILabel!
+    @IBOutlet weak var gradientView: UIView!
+    @IBOutlet weak var halfHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var fullHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var buttonToggle: UIButton!
+    @IBOutlet weak var buttonWiki: UIButton!
     
     public var titleStructure: String?
     public var detailDescription: String?
     public var srtuctureCell: DataStructMemory?
-   
+    public var linkToWikiStructure: String?
+    
     var isShowingText = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = srtuctureCell?.titleOfString() ?? "There is no such title"
-        self.descriptionValue.text = srtuctureCell?.descrOfstring() ?? "There is no such description"
+        self.descriptionValue.text = srtuctureCell?.descrOfString() ?? "There is no such description"
         gradientView.opacityGradient()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBOutlet weak var gradientView: UIView!
-    var gradientLayer: CAGradientLayer!
-
-    @IBOutlet weak var halfHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var fullHeightConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-    
     @IBAction func buttonShowText(_ sender: Any) {
-        
         let titleMore = "More"
         let titleLess = "Less"
         if self.isShowingText {
@@ -50,9 +48,9 @@ class DetailViewController: UIViewController {
             self.isShowingText = true
             self.heightConstraint.priority = UILayoutPriority(rawValue: 250)
             self.gradientView.isHidden = true
+            
         }
         view.layoutIfNeeded()
-    
     }
     
     @IBAction func animateButtonMore(_ sender: UIButton) {

@@ -11,7 +11,7 @@ import Foundation
 protocol DataStructMemory {
     
     func titleOfString() -> String
-    
-    func descrOfstring() -> String
+    func descrOfString() -> String
+    func getWikiLink() -> String
     
 }

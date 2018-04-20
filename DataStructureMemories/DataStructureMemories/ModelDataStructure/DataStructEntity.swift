@@ -9,21 +9,26 @@
 import Foundation
 
 class DataStructEntity: DataStructMemory {
-    
+   
     private let title: String
     private let descr: String
+    private let link: String
     
     func titleOfString() -> String {
         return title.self
     }
     
-    func descrOfstring() -> String {
+    func descrOfString() -> String {
         return descr.self
     }
+    func getWikiLink() -> String {
+        return link.self
+    }
     
-    init(title: String, description: String) {
+    init(title: String, description: String, link: String) {
         self.title = title
         self.descr = description
+        self.link = link
     }
     
 }

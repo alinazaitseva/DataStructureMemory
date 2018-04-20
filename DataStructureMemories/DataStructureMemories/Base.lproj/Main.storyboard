@@ -124,6 +124,17 @@
                                             <action selector="buttonShowText:" destination="noo-0f-SbK" eventType="touchUpInside" id="Cro-E2-EBm"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbD-gP-56I">
+                                        <rect key="frame" x="371" y="376" width="40" height="38"/>
+                                        <color key="backgroundColor" red="0.081092710750000005" green="0.081895608879999998" blue="0.081895608879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Wiki">
+                                            <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="p03-YX-34i" secondAttribute="bottom" id="Koj-dP-Wl8"/>
@@ -131,6 +142,8 @@
                                     <constraint firstAttribute="trailing" secondItem="aNf-lF-eVB" secondAttribute="trailing" id="QVl-oF-ODe"/>
                                     <constraint firstItem="p03-YX-34i" firstAttribute="leading" secondItem="s3K-7o-f8w" secondAttribute="leading" id="VrD-U1-BBf"/>
                                     <constraint firstAttribute="trailing" secondItem="p03-YX-34i" secondAttribute="trailing" id="dWM-Fb-Q2T"/>
+                                    <constraint firstItem="pbD-gP-56I" firstAttribute="centerX" secondItem="aNf-lF-eVB" secondAttribute="centerX" id="kiN-TW-v7O"/>
+                                    <constraint firstItem="pbD-gP-56I" firstAttribute="top" secondItem="p03-YX-34i" secondAttribute="bottom" constant="8" id="qn6-07-2RL"/>
                                     <constraint firstItem="p03-YX-34i" firstAttribute="top" secondItem="s3K-7o-f8w" secondAttribute="top" id="vFr-m6-v80"/>
                                 </constraints>
                             </scrollView>
@@ -149,6 +162,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonToggle" destination="aNf-lF-eVB" id="LsI-iH-HBD"/>
+                        <outlet property="buttonWiki" destination="pbD-gP-56I" id="B2o-0l-cBZ"/>
                         <outlet property="descriptionValue" destination="y8o-pI-Xef" id="X0f-QG-MSQ"/>
                         <outlet property="fullHeightConstraint" destination="1lB-7v-mj3" id="2gW-DI-iDm"/>
                         <outlet property="gradientView" destination="Y6b-jV-h5q" id="WM1-EF-EK3"/>
