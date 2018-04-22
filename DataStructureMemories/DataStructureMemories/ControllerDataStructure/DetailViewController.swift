@@ -56,26 +56,37 @@ class DetailViewController: UIViewController {
         }
         view.layoutIfNeeded()
     }
-//    let actionSheet = AFMActionSheetController()
-//    let action = AFMAction(title: "Action", enabled: true, handler: { (action: AFMAction) -> Void in
-//        // Do something in handler
-//    }
-//        actionSheet.add(action)
-//        self.present(actionSheet, animated: true, completion: {
-//        // Do something after completion
-//        })
-//
-//    let actionSheet: UIAController = UIAlertController(title: "Please select", preferredStyle: .actionSheet)
     
-    @IBAction func downloadSheet(_ sender: AnyObject) {
-    
-    }
-    
-    @IBAction func animateButtonMore(_ sender: UIButton) {
-        UIView.animate(withDuration: 1.6, animations: {
-            self.buttonToggle.frame.origin.y -= 20
-        }, completion: nil)
-        view.layoutIfNeeded()
+    @IBAction func pathToLinksToWiki(_ sender: Any) {
+        let actionSheetController: UIAlertController = UIAlertController( title: "Please select", message: "Option to select", preferredStyle: .actionSheet)
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) {
+            _ in
+            print("Cancel")
+        }
+        actionSheetController.addAction(cancelActionButton)
+        let uiWebViewAction = UIAlertAction(title: "UIWebViewAction", style: .default) {
+            _ in
+            print("Save")
+        }
+        actionSheetController.addAction(uiWebViewAction)
+        
+        let webKitView = UIAlertAction(title: "WebViewAction", style: .default) {
+            _ in
+            print("webKitView")
+        }
+        actionSheetController.addAction(webKitView)
+        
+        let sfSafary = UIAlertAction(title: "SfSafaryAction", style: .default) {
+            _ in
+            print("sfSafary")
+        }
+
+        let deleteActionButton = UIAlertAction(title: "Delete", style: .default) {
+            _ in
+            print("Delete")
+        }
+        actionSheetController.addAction(deleteActionButton)
+        self.present(actionSheetController, animated: true, completion: nil)
     }
 }
 
