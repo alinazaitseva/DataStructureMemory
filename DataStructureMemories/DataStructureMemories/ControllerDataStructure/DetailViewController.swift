@@ -80,7 +80,7 @@ class DetailViewController: UIViewController {
             _ in
             print("sfSafary")
         }
-
+        actionSheetController.addAction(sfSafary)
         let deleteActionButton = UIAlertAction(title: "Delete", style: .default) {
             _ in
             print("Delete")

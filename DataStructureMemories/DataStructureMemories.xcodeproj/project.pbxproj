@@ -16,6 +16,9 @@
 		CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */; };
 		CE674F652084C9B800E18E5E /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE674F642084C9B800E18E5E /* ConfigurableCell.swift */; };
 		CE674F6B2084CE1000E18E5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE674F6A2084CE1000E18E5E /* DetailViewController.swift */; };
+		CE69BD35208D3A8D00D308CA /* UIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BD34208D3A8D00D308CA /* UIWebViewController.swift */; };
+		CE69BD37208D3AA900D308CA /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BD36208D3AA900D308CA /* WKWebViewController.swift */; };
+		CE69BD39208D3AF500D308CA /* SFSafaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BD38208D3AF500D308CA /* SFSafaryViewController.swift */; };
 		CE8DF64F208602AA00F14AA7 /* DataStructEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DF64E208602AA00F14AA7 /* DataStructEntity.swift */; };
 		CECDDECB207F8EFB0072B383 /* DataStructureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */; };
 		CECDDECD207FAB830072B383 /* DataStructureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDDECC207FAB830072B383 /* DataStructureCell.swift */; };
@@ -33,6 +36,9 @@
 		CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemoryList.swift; sourceTree = "<group>"; };
 		CE674F642084C9B800E18E5E /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfigurableCell.swift; path = ../../../../../ConfigurableCell.swift; sourceTree = "<group>"; };
 		CE674F6A2084CE1000E18E5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CE69BD34208D3A8D00D308CA /* UIWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebViewController.swift; sourceTree = "<group>"; };
+		CE69BD36208D3AA900D308CA /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		CE69BD38208D3AF500D308CA /* SFSafaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafaryViewController.swift; sourceTree = "<group>"; };
 		CE8DF64E208602AA00F14AA7 /* DataStructEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructEntity.swift; sourceTree = "<group>"; };
 		CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableViewController.swift; sourceTree = "<group>"; };
 		CECDDECC207FAB830072B383 /* DataStructureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureCell.swift; sourceTree = "<group>"; };
@@ -113,6 +119,9 @@
 			children = (
 				CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */,
 				CE674F6A2084CE1000E18E5E /* DetailViewController.swift */,
+				CE69BD34208D3A8D00D308CA /* UIWebViewController.swift */,
+				CE69BD36208D3AA900D308CA /* WKWebViewController.swift */,
+				CE69BD38208D3AF500D308CA /* SFSafaryViewController.swift */,
 			);
 			path = ControllerDataStructure;
 			sourceTree = "<group>";
@@ -190,14 +199,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */,
+				CE69BD35208D3A8D00D308CA /* UIWebViewController.swift in Sources */,
 				CE53572C2086014A003D98AF /* DataStructMemory.swift in Sources */,
 				CE0DE1B0207F77AD0031F233 /* AppDelegate.swift in Sources */,
 				CE8DF64F208602AA00F14AA7 /* DataStructEntity.swift in Sources */,
+				CE69BD39208D3AF500D308CA /* SFSafaryViewController.swift in Sources */,
 				CECDDECD207FAB830072B383 /* DataStructureCell.swift in Sources */,
 				CE674F652084C9B800E18E5E /* ConfigurableCell.swift in Sources */,
 				CE65A6F42080B702003FB1E7 /* DataStructMemorySorce.swift in Sources */,
 				CECDDECB207F8EFB0072B383 /* DataStructureTableViewController.swift in Sources */,
 				CE674F6B2084CE1000E18E5E /* DetailViewController.swift in Sources */,
+				CE69BD37208D3AA900D308CA /* WKWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
