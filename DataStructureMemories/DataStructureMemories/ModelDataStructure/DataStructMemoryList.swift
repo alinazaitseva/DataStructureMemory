@@ -17,30 +17,14 @@ class DataStructMemoryList: DataStructureMemorySource{
     
     var wikiLinks: [String] {
         return [
-            """
-                https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
-            """,
-            """
-                https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
-            """,
-            """
-                https://en.wikipedia.org/wiki/Set_(abstract_data_type)
-            """,
-            """
-                https://en.wikipedia.org/wiki/Double-ended_queue
-            """,
-            """
-                https://en.wikipedia.org/wiki/Priority_queue
-            """,
-            """
-                https://en.wikipedia.org/wiki/Dynamic_array
-            """,
-            """
-                https://en.wikipedia.org/wiki/Multiset
-            """,
-            """
-                https://en.wikipedia.org/wiki/Associative_array
-            """
+            "https://en.wikipedia.org/wiki/Stack_(abstract_data_type)",
+            "https://en.wikipedia.org/wiki/Queue_(abstract_data_type)",
+            "https://en.wikipedia.org/wiki/Set_(abstract_data_type)",
+            "https://en.wikipedia.org/wiki/Double-ended_queue",
+            "https://en.wikipedia.org/wiki/Priority_queue",
+            "https://en.wikipedia.org/wiki/Dynamic_array",
+            "https://en.wikipedia.org/wiki/Multiset",
+            "https://en.wikipedia.org/wiki/Associative_array"
         ]
     }
     
