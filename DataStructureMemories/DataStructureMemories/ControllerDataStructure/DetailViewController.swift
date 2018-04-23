@@ -19,10 +19,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var buttonToggle: UIButton!
     @IBOutlet weak var buttonWiki: UIButton!
     
-    public var titleStructure: String?
-    public var detailDescription: String?
     public var srtuctureCell: DataStructMemory?
-    public var linkToWikiStructure: String?
     
     var isShowingText = false
     
@@ -61,6 +58,7 @@ class DetailViewController: UIViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let choosenController = mainStoryboard.instantiateViewController(withIdentifier: "WKWebViewController") as? WKWebViewController
             else { return }
+        choosenController.exactURL = srtuctureCell?.getWikiLink()
         self.present(choosenController, animated: true)
     }
     
@@ -76,6 +74,7 @@ class DetailViewController: UIViewController {
         let uiWebViewAction = UIAlertAction(title: "UIWebViewAction", style: .default) {
             _ in
             print("Save")
+            self.giveWayToController()
         }
         actionSheetController.addAction(uiWebViewAction)
         
@@ -88,6 +87,7 @@ class DetailViewController: UIViewController {
         
         let sfSafary = UIAlertAction(title: "SfSafaryAction", style: .default) {
             _ in
+             self.giveWayToController()
             print("sfSafary")
         }
         actionSheetController.addAction(sfSafary)
