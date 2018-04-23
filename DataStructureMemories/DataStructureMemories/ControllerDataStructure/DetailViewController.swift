@@ -54,12 +54,26 @@ class DetailViewController: UIViewController {
         view.layoutIfNeeded()
     }
     
-    func giveWayToController() {
+    func giveWayToWKWebViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let choosenController = mainStoryboard.instantiateViewController(withIdentifier: "WKWebViewController") as? WKWebViewController
+        guard let wkWebViewController = mainStoryboard.instantiateViewController(withIdentifier: "WKWebViewController") as? WKWebViewController
             else { return }
-        choosenController.exactURL = srtuctureCell?.getWikiLink()
-        self.present(choosenController, animated: true)
+        wkWebViewController.exactURL = srtuctureCell?.getWikiLink()
+        self.present(wkWebViewController, animated: true)
+    }
+    func giveWayToUIWebViewController() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let uiWebViewController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController
+            else { return }
+        uiWebViewController.exactURL = srtuctureCell?.getWikiLink()
+        self.present(uiWebViewController, animated: true)
+    }
+    func giveWayToSFSafaryViewController() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let sfSafaryViewController = mainStoryboard.instantiateViewController(withIdentifier: "SFSafaryViewController") as? SFSafaryViewController
+            else { return }
+        sfSafaryViewController.exactURL = srtuctureCell?.getWikiLink()
+        self.present(sfSafaryViewController, animated: true)
     }
     
     @IBAction func pathToLinksToWiki(_ sender: Any) {
@@ -74,20 +88,20 @@ class DetailViewController: UIViewController {
         let uiWebViewAction = UIAlertAction(title: "UIWebViewAction", style: .default) {
             _ in
             print("Save")
-            self.giveWayToController()
+            self.giveWayToUIWebViewController()
         }
         actionSheetController.addAction(uiWebViewAction)
         
         let webKitView = UIAlertAction(title: "WebViewAction", style: .default) {
             _ in
-            self.giveWayToController()
+            self.giveWayToWKWebViewController()
             print("webKitView")
         }
         actionSheetController.addAction(webKitView)
         
         let sfSafary = UIAlertAction(title: "SfSafaryAction", style: .default) {
             _ in
-             self.giveWayToController()
+             self.giveWayToSFSafaryViewController()
             print("sfSafary")
         }
         actionSheetController.addAction(sfSafary)
