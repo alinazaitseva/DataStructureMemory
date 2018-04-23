@@ -57,13 +57,22 @@ class DetailViewController: UIViewController {
         view.layoutIfNeeded()
     }
     
+    func giveWayToController() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let choosenController = mainStoryboard.instantiateViewController(withIdentifier: "WKWebViewController") as? WKWebViewController
+            else { return }
+        self.present(choosenController, animated: true)
+    }
+    
     @IBAction func pathToLinksToWiki(_ sender: Any) {
+    
         let actionSheetController: UIAlertController = UIAlertController( title: "Please select", message: "Option to select", preferredStyle: .actionSheet)
         let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) {
             _ in
             print("Cancel")
         }
         actionSheetController.addAction(cancelActionButton)
+        
         let uiWebViewAction = UIAlertAction(title: "UIWebViewAction", style: .default) {
             _ in
             print("Save")
@@ -72,6 +81,7 @@ class DetailViewController: UIViewController {
         
         let webKitView = UIAlertAction(title: "WebViewAction", style: .default) {
             _ in
+            self.giveWayToController()
             print("webKitView")
         }
         actionSheetController.addAction(webKitView)
@@ -81,11 +91,7 @@ class DetailViewController: UIViewController {
             print("sfSafary")
         }
         actionSheetController.addAction(sfSafary)
-        let deleteActionButton = UIAlertAction(title: "Delete", style: .default) {
-            _ in
-            print("Delete")
-        }
-        actionSheetController.addAction(deleteActionButton)
+
         self.present(actionSheetController, animated: true, completion: nil)
     }
 }

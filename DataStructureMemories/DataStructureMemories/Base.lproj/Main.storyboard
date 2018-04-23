@@ -181,7 +181,7 @@
         <!--SFSafaryViewController-->
         <scene sceneID="Ren-1J-GGX">
             <objects>
-                <viewController title="SFSafaryViewController" id="Pu2-SW-lWC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SFSafaryViewController" title="SFSafaryViewController" id="Pu2-SW-lWC" customClass="SFSafaryViewController" customModule="DataStructureMemories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D03-EP-IB2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,7 +196,7 @@
         <!--UIWebViewController-->
         <scene sceneID="F3F-z2-fVf">
             <objects>
-                <viewController title="UIWebViewController" id="air-ZQ-YZX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIWebViewController" title="UIWebViewController" id="air-ZQ-YZX" customClass="UIWebViewController" customModule="DataStructureMemories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1tK-YC-i3N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
         <!--WKWebViewController-->
         <scene sceneID="Qk3-wb-BAt">
             <objects>
-                <viewController title="WKWebViewController" id="8Ro-qy-q0f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WKWebViewController" title="WKWebViewController" id="8Ro-qy-q0f" customClass="WKWebViewController" customModule="DataStructureMemories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RHk-LO-jig">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
