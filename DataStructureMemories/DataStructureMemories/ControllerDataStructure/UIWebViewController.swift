@@ -13,24 +13,19 @@ class UIWebViewController: UIViewController, UIWebViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let webView: UIWebView = UIWebView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        
-        self.view.addSubview(webView)
-        webView.delegate = self
-        
-        let navigationUI = navigationController as! UIWebNavigationViewController
-        exactURL = navigationUI.exactURL
         let urlRequest: URLRequest = URLRequest(url: URL(string: exactURL!)!)
-        webView.loadRequest(urlRequest)
+        UIWebView.loadRequest(urlRequest)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-       
     }
-    @IBAction func backButton(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
+
+    @IBOutlet weak var UIWebView: UIWebView!
+    
+    @IBAction func tapedBackButton(_ sender: Any) {
+            self.dismiss(animated: true)
     }
+    
     
 }

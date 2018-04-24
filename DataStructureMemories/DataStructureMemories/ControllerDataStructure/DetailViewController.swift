@@ -62,10 +62,11 @@ class DetailViewController: UIViewController {
     }
     func giveWayToUIWebViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let navigationUIController = mainStoryboard.instantiateViewController(withIdentifier: "showUI") as?
-            UIWebNavigationViewController else { return }
-        navigationUIController.exactURL = srtuctureCell?.getWikiLink()
-        self.present(navigationUIController, animated: true)
+
+        guard let uiWebController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController else { return }
+            
+        uiWebController.exactURL = srtuctureCell?.getWikiLink()
+        self.present(uiWebController, animated: true)
     }
     func giveWayToSFSafaryViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
