@@ -40,11 +40,9 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailViewController = storyboard.instantiateViewController(withIdentifier:  "DetailViewController") as! DetailViewController
-        let selectedCell = DataStructEntity(title: dataStructureManipulatios.getValueInDataSource(item: indexPath.row), description: dataStructureManipulatios.descriptOfDataStructure[indexPath.row])
+        let selectedCell = DataStructEntity(title: dataStructureManipulatios.getValueInDataSource(item: indexPath.row), description: dataStructureManipulatios.descriptOfDataStructure[indexPath.row], link: dataStructureManipulatios.wikiLinks[indexPath.row])
         
         detailViewController.srtuctureCell = selectedCell
-        
-        
         self.navigationController?.pushViewController(detailViewController, animated: false)
     }
     

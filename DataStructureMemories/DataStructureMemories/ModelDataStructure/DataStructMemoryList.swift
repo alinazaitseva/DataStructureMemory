@@ -9,10 +9,23 @@
 import Foundation
 
 class DataStructMemoryList: DataStructureMemorySource{
-    
+ 
     var listOfDataStructure: [String] {
         
         return ["Stack","Queue","Set","Dequeue","Priority Queue","List(Array)", "MultiSet","Dictionary"]
+    }
+    
+    var wikiLinks: [String] {
+        return [
+            "https://en.wikipedia.org/wiki/Stack_(abstract_data_type)",
+            "https://en.wikipedia.org/wiki/Queue_(abstract_data_type)",
+            "https://en.wikipedia.org/wiki/Set_(abstract_data_type)",
+            "https://en.wikipedia.org/wiki/Double-ended_queue",
+            "https://en.wikipedia.org/wiki/Priority_queue",
+            "https://en.wikipedia.org/wiki/Dynamic_array",
+            "https://en.wikipedia.org/wiki/Multiset",
+            "https://en.wikipedia.org/wiki/Associative_array"
+        ]
     }
     
     var descriptOfDataStructure: [String] {
@@ -51,7 +64,6 @@ class DataStructMemoryList: DataStructureMemorySource{
     func getAmountOfValuesInDataSorce() -> Int {
       return listOfDataStructure.count
     }
-    
     
     
 }
