@@ -9,7 +9,8 @@
 import UIKit
 
 class UIWebNavigationViewController: UINavigationController {
-
+    var exactURL: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

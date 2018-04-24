@@ -56,16 +56,16 @@ class DetailViewController: UIViewController {
     
     func giveWayToWKWebViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let navigationController = mainStoryboard.instantiateViewController(withIdentifier: "showWK") as? WKWebNavigationViewController else { return }
-        navigationController.exactURL = srtuctureCell?.getWikiLink()
-        self.present(navigationController, animated: true)
+        guard let navigationWKController = mainStoryboard.instantiateViewController(withIdentifier: "showWK") as? WKWebNavigationViewController else { return }
+        navigationWKController.exactURL = srtuctureCell?.getWikiLink()
+        self.present(navigationWKController, animated: true)
     }
     func giveWayToUIWebViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let uiWebViewController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController
-            else { return }
-        uiWebViewController.exactURL = srtuctureCell?.getWikiLink()
-        self.present(uiWebViewController, animated: true)
+        guard let navigationUIController = mainStoryboard.instantiateViewController(withIdentifier: "showUI") as?
+            UIWebNavigationViewController else { return }
+        navigationUIController.exactURL = srtuctureCell?.getWikiLink()
+        self.present(navigationUIController, animated: true)
     }
     func giveWayToSFSafaryViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -74,8 +74,6 @@ class DetailViewController: UIViewController {
         sfSafaryViewController.exactURL = srtuctureCell?.getWikiLink()
         self.present(sfSafaryViewController, animated: true)
     }
-    
-    
     
     @IBAction func pathToLinksToWiki(_ sender: Any) {
     

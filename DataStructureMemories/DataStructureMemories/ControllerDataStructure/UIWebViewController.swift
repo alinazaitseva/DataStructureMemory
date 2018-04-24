@@ -19,6 +19,8 @@ class UIWebViewController: UIViewController, UIWebViewDelegate {
         self.view.addSubview(webView)
         webView.delegate = self
         
+        let navigationUI = navigationController as! UIWebNavigationViewController
+        exactURL = navigationUI.exactURL
         let urlRequest: URLRequest = URLRequest(url: URL(string: exactURL!)!)
         webView.loadRequest(urlRequest)
     }
