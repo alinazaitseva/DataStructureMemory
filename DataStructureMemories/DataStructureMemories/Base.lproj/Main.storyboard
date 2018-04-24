@@ -181,6 +181,7 @@
         <!--SFSafaryViewController-->
         <scene sceneID="Ren-1J-GGX">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PvN-Ap-d7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SFSafaryViewController" title="SFSafaryViewController" id="Pu2-SW-lWC" customClass="SFSafaryViewController" customModule="DataStructureMemories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D03-EP-IB2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -188,10 +189,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oNG-TQ-XCp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="P7x-gk-cQr"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PvN-Ap-d7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2513" y="264"/>
+            <point key="canvasLocation" x="2971" y="254"/>
         </scene>
         <!--UIWebViewController-->
         <scene sceneID="F3F-z2-fVf">
@@ -203,10 +204,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kO7-vF-PSo"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qsI-AM-frA">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="sCP-0Z-xAT">
+                            <connections>
+                                <action selector="backButton:" destination="air-ZQ-YZX" id="w3C-zt-Qsm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6V-LC-tz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2099" y="-469"/>
+            <point key="canvasLocation" x="2648" y="-470"/>
         </scene>
         <!--WKWebViewController-->
         <scene sceneID="Qk3-wb-BAt">
@@ -218,10 +226,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hIW-wf-Itq"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dw8-ZD-asu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="HxK-I3-eue">
+                            <connections>
+                                <action selector="backButton:" destination="8Ro-qy-q0f" id="zEU-9Y-RsD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tht-xq-vX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2954" y="-468"/>
+            <point key="canvasLocation" x="4222" y="-483"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4av-OI-QT2">
@@ -240,6 +255,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXG-Gh-Bxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-414" y="-88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="af4-IO-8bN">
+            <objects>
+                <navigationController storyboardIdentifier="showUI" automaticallyAdjustsScrollViewInsets="NO" id="H2S-Eo-623" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qa6-Hu-Tpi">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="air-ZQ-YZX" kind="relationship" relationship="rootViewController" id="ygM-vs-XeC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ld6-Su-hNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="-470"/>
+        </scene>
+        <!--Web Navigation View Controller-->
+        <scene sceneID="cY0-vn-BgO">
+            <objects>
+                <navigationController storyboardIdentifier="showWK" automaticallyAdjustsScrollViewInsets="NO" id="7fd-IU-fuX" customClass="WKWebNavigationViewController" customModule="DataStructureMemories" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OaR-Z7-ENO">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Ro-qy-q0f" kind="relationship" relationship="rootViewController" id="og8-N0-Z3B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUw-wE-aXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3435" y="-483"/>
         </scene>
     </scenes>
 </document>

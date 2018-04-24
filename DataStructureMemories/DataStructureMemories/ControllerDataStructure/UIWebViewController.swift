@@ -21,12 +21,14 @@ class UIWebViewController: UIViewController, UIWebViewDelegate {
         
         let urlRequest: URLRequest = URLRequest(url: URL(string: exactURL!)!)
         webView.loadRequest(urlRequest)
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
     }
-
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
+    }
+    
 }

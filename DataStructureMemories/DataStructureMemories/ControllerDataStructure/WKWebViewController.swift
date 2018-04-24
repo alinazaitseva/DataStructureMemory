@@ -21,14 +21,17 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: exactURL!)
-        
-        webView.load(URLRequest(url: url!))
+        let it = navigationController as! WKWebNavigationViewController
+        exactURL = it.exactURL
         webView.allowsBackForwardNavigationGestures = true
+        webView.load(URLRequest(url: URL(string: exactURL!)!))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
+    }
 }
