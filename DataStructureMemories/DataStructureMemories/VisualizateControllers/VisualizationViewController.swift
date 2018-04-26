@@ -16,35 +16,26 @@ class VisualizationViewController: UIViewController {
     
     @IBOutlet weak var stackView: UIStackView!
     
-    @IBOutlet weak var buttonToched: UIButton!
+  
+    @objc func buttonTouched() {
+        print("1")
+        print("2")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let title = titleVisual {
             self.navigationItem.title = "\(title)"
         }
-        
-//        let popButton = createButton(named: "pop", in: containerUIView) {
-//
-//        }
+        let popButton = createActionButton(title: "Pop")
+        stackView.addArrangedSubview(popButton)
+        let pushButton = createActionButton(title: "Push")
+        stackView.addArrangedSubview(pushButton)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-//    func pushButton() {
-//        targetSimulateController?.colored = UIColor.green
-//        targetSimulateController?.numberOfRows += 1
-//        targetSimulateController?.tableView.reloadData()
-//    }
-//
-//    func popButton() {
-//        if targetSimulateController?.numberOfRows != 0 {
-//            targetSimulateController?.numberOfRows -= 1
-//        }
-//        targetSimulateController?.tableView.reloadData()
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let targetSimulate = segue.destination as? SimulateTableViewController {
@@ -53,21 +44,13 @@ class VisualizationViewController: UIViewController {
         }
     }
     
-//    func actionButtonCreate(named title: String, view: UIStoryboard) -> UIButton {
-//        let button = UIButton(type: UIButton.custom)
-//        button.backgroundColor = UIColor.white
-//        button.setTitle(title, for: .normal)
-//        button.addTarget(view, action: #selector(buttonToched), for: .touchUpInside )
-//        return button
-//
-//    }
-
+    func createActionButton(title: String) -> UIButton {
+        let button = UIButton(frame: CGRect(x:0, y:0, width:100, height: 64))
+        button.backgroundColor = UIColor.yellow
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside); return button
+    }
 }
-
-
-
-
-
-
 
 

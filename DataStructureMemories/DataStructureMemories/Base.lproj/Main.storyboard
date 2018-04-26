@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -211,15 +212,9 @@
                                     <segue destination="cla-aU-m6Z" kind="embed" id="dbg-Ce-pS5"/>
                                 </connections>
                             </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zeM-5V-mIP">
-                                <rect key="frame" x="41" y="30" width="46" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zeM-5V-mIP">
+                                <rect key="frame" x="20" y="96" width="374" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idH-9b-EVT">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -231,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDS-Cx-7bs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="671"/>
+            <point key="canvasLocation" x="928.98550724637687" y="670.92391304347836"/>
         </scene>
         <!--Simulate Table View Controller-->
         <scene sceneID="tKG-YE-5DO">
@@ -275,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvN-Ap-d7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2480" y="329"/>
+            <point key="canvasLocation" x="4478" y="-101"/>
         </scene>
         <!--UIWebViewController-->
         <scene sceneID="F3F-z2-fVf">
@@ -320,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6V-LC-tz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2158" y="-395"/>
+            <point key="canvasLocation" x="2188" y="-88"/>
         </scene>
         <!--WKWebViewController-->
         <scene sceneID="Qk3-wb-BAt">
@@ -342,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tht-xq-vX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3732" y="-408"/>
+            <point key="canvasLocation" x="3762" y="-101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4av-OI-QT2">
@@ -378,7 +373,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUw-wE-aXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2945" y="-408"/>
+            <point key="canvasLocation" x="2975" y="-101"/>
         </scene>
     </scenes>
 </document>
