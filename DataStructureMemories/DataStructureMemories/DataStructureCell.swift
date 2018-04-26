@@ -9,17 +9,12 @@
 import UIKit
 
 class DataStructureCell: UITableViewCell {
-   
     @IBOutlet weak var titleLabel: UILabel!
-    
 }
 
 extension DataStructureCell: ConfigurableCell {
     
     func configure(_ model: DataStructEntity) {
-        
         titleLabel.text = model.titleOfString()
     }
-    
-    
 }

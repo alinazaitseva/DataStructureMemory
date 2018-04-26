@@ -13,6 +13,11 @@
 		CE0DE1BA207F77AD0031F233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0DE1B8207F77AD0031F233 /* LaunchScreen.storyboard */; };
 		CE0E2CAC208E4E1900579AAC /* UIWebNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E2CAB208E4E1900579AAC /* UIWebNavigationViewController.swift */; };
 		CE0E2CAE208E4E8800579AAC /* WKWebNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E2CAD208E4E8800579AAC /* WKWebNavigationViewController.swift */; };
+		CE19CA0E2091B5AC00AAC17C /* VisualizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA0D2091B5AC00AAC17C /* VisualizationViewController.swift */; };
+		CE19CA102091B63400AAC17C /* SimulateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA0F2091B63400AAC17C /* SimulateTableViewController.swift */; };
+		CE19CA132091D45F00AAC17C /* ManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA122091D45F00AAC17C /* ManagerController.swift */; };
+		CE19CA152091D52F00AAC17C /* FactoryControlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA142091D52F00AAC17C /* FactoryControlManager.swift */; };
+		CE19CA172091D58A00AAC17C /* ATDControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA162091D58A00AAC17C /* ATDControlProtocol.swift */; };
 		CE53572C2086014A003D98AF /* DataStructMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53572B2086014A003D98AF /* DataStructMemory.swift */; };
 		CE65A6F42080B702003FB1E7 /* DataStructMemorySorce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */; };
 		CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */; };
@@ -35,6 +40,11 @@
 		CE0DE1BB207F77AD0031F233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0E2CAB208E4E1900579AAC /* UIWebNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebNavigationViewController.swift; sourceTree = "<group>"; };
 		CE0E2CAD208E4E8800579AAC /* WKWebNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebNavigationViewController.swift; sourceTree = "<group>"; };
+		CE19CA0D2091B5AC00AAC17C /* VisualizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewController.swift; sourceTree = "<group>"; };
+		CE19CA0F2091B63400AAC17C /* SimulateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateTableViewController.swift; sourceTree = "<group>"; };
+		CE19CA122091D45F00AAC17C /* ManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerController.swift; sourceTree = "<group>"; };
+		CE19CA142091D52F00AAC17C /* FactoryControlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryControlManager.swift; sourceTree = "<group>"; };
+		CE19CA162091D58A00AAC17C /* ATDControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDControlProtocol.swift; sourceTree = "<group>"; };
 		CE53572B2086014A003D98AF /* DataStructMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemory.swift; sourceTree = "<group>"; };
 		CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemorySorce.swift; sourceTree = "<group>"; };
 		CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemoryList.swift; sourceTree = "<group>"; };
@@ -78,6 +88,7 @@
 		CE0DE1AE207F77AD0031F233 /* DataStructureMemories */ = {
 			isa = PBXGroup;
 			children = (
+				CE19CA112091D33000AAC17C /* VisualizateControllers */,
 				CE0DE1B3207F77AD0031F233 /* Main.storyboard */,
 				CE65A6F92080BC7A003FB1E7 /* ProtocolDataStructure */,
 				CE65A6F82080BC6C003FB1E7 /* ModelDataStructure */,
@@ -87,6 +98,18 @@
 				CE0DE1BB207F77AD0031F233 /* Info.plist */,
 			);
 			path = DataStructureMemories;
+			sourceTree = "<group>";
+		};
+		CE19CA112091D33000AAC17C /* VisualizateControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE19CA162091D58A00AAC17C /* ATDControlProtocol.swift */,
+				CE19CA122091D45F00AAC17C /* ManagerController.swift */,
+				CE19CA142091D52F00AAC17C /* FactoryControlManager.swift */,
+				CE19CA0D2091B5AC00AAC17C /* VisualizationViewController.swift */,
+				CE19CA0F2091B63400AAC17C /* SimulateTableViewController.swift */,
+			);
+			path = VisualizateControllers;
 			sourceTree = "<group>";
 		};
 		CE65A6F22080B661003FB1E7 /* Supporting files */ = {
@@ -206,16 +229,21 @@
 			files = (
 				CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */,
 				CE69BD35208D3A8D00D308CA /* UIWebViewController.swift in Sources */,
+				CE19CA172091D58A00AAC17C /* ATDControlProtocol.swift in Sources */,
 				CE53572C2086014A003D98AF /* DataStructMemory.swift in Sources */,
 				CE0DE1B0207F77AD0031F233 /* AppDelegate.swift in Sources */,
 				CE8DF64F208602AA00F14AA7 /* DataStructEntity.swift in Sources */,
+				CE19CA102091B63400AAC17C /* SimulateTableViewController.swift in Sources */,
 				CE69BD39208D3AF500D308CA /* SFSafaryViewController.swift in Sources */,
 				CECDDECD207FAB830072B383 /* DataStructureCell.swift in Sources */,
 				CE0E2CAE208E4E8800579AAC /* WKWebNavigationViewController.swift in Sources */,
+				CE19CA132091D45F00AAC17C /* ManagerController.swift in Sources */,
 				CE674F652084C9B800E18E5E /* ConfigurableCell.swift in Sources */,
 				CE0E2CAC208E4E1900579AAC /* UIWebNavigationViewController.swift in Sources */,
 				CE65A6F42080B702003FB1E7 /* DataStructMemorySorce.swift in Sources */,
 				CECDDECB207F8EFB0072B383 /* DataStructureTableViewController.swift in Sources */,
+				CE19CA152091D52F00AAC17C /* FactoryControlManager.swift in Sources */,
+				CE19CA0E2091B5AC00AAC17C /* VisualizationViewController.swift in Sources */,
 				CE674F6B2084CE1000E18E5E /* DetailViewController.swift in Sources */,
 				CE69BD37208D3AA900D308CA /* WKWebViewController.swift in Sources */,
 			);

@@ -108,6 +108,12 @@ class DetailViewController: UIViewController {
 
         self.present(actionSheetController, animated: true, completion: nil)
     }
+    
+    @IBAction func buttonVisualize(_ sender: UIButton) {
+        let mainStoryboard = UIStoryboard( name: "Main", bundle: nil )
+        guard let visualizeViewController = mainStoryboard.instantiateViewController(withIdentifier: "VisualizationViewController") as? VisualizationViewController else { return }
+        self.navigationController?.pushViewController(visualizeViewController, animated: true)
+    }
 }
 
 extension UIView {

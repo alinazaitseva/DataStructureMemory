@@ -25,7 +25,6 @@ class UIWebViewController: UIViewController, UIWebViewDelegate {
     
     @IBAction func tapedBackButton(_ sender: Any) {
             self.dismiss(animated: true)
-    }
-    
+    }    
     
 }
