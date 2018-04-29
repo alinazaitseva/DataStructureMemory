@@ -112,6 +112,8 @@ class DetailViewController: UIViewController {
     @IBAction func buttonVisualize(_ sender: UIButton) {
         let mainStoryboard = UIStoryboard( name: "Main", bundle: nil )
         guard let visualizeViewController = mainStoryboard.instantiateViewController(withIdentifier: "VisualizationViewController") as? VisualizationViewController else { return }
+        
+        
         self.navigationController?.pushViewController(visualizeViewController, animated: true)
     }
 }
@@ -120,7 +122,7 @@ extension UIView {
     func opacityGradient() {
         let gradient = CAGradientLayer()
         gradient.frame = self.bounds
-        gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]
         gradient.locations = [0.0, 1.0]
         self.layer.mask = gradient
     }
@@ -129,7 +131,5 @@ extension UIView {
 extension UIButton {
     func setTitle(_ title: String) {
         self.setTitle(title, for: .normal)
-        self.setTitle(title, for: .disabled)
-        self.setTitle(title, for: .focused)
     }
 }

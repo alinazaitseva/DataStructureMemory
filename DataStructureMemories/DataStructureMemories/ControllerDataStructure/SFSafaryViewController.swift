@@ -33,7 +33,6 @@ class SFSafaryViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         isClosing = true
-        
     }
     
 }

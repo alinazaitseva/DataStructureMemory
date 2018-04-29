@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -73,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr5-Y0-rrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="388" y="-88"/>
+            <point key="canvasLocation" x="386.95652173913044" y="-88.043478260869577"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="PWU-0y-T59">
@@ -212,8 +211,8 @@
                                     <segue destination="cla-aU-m6Z" kind="embed" id="dbg-Ce-pS5"/>
                                 </connections>
                             </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zeM-5V-mIP">
-                                <rect key="frame" x="20" y="96" width="374" height="94"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zeM-5V-mIP">
+                                <rect key="frame" x="20" y="46" width="374" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
@@ -237,13 +236,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VisualCell" id="Hul-ur-ttQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SimulateVisualCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimulateVisualCell" id="Hul-ur-ttQ" customClass="SimulateVisualCell" customModule="DataStructureMemories" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hul-ur-ttQ" id="0KH-Fl-39h">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ0-Xr-ZgS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SJ0-Xr-ZgS" firstAttribute="top" secondItem="0KH-Fl-39h" secondAttribute="top" id="74B-Lo-R1V"/>
+                                        <constraint firstItem="SJ0-Xr-ZgS" firstAttribute="leading" secondItem="0KH-Fl-39h" secondAttribute="leading" id="XMK-c9-cp7"/>
+                                        <constraint firstAttribute="bottom" secondItem="SJ0-Xr-ZgS" secondAttribute="bottom" id="Y5o-Mt-TgM"/>
+                                        <constraint firstAttribute="trailing" secondItem="SJ0-Xr-ZgS" secondAttribute="trailing" id="fo3-9h-jht"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="simulateLabel" destination="SJ0-Xr-ZgS" id="I4u-BE-g7d"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -251,6 +267,10 @@
                             <outlet property="delegate" destination="cla-aU-m6Z" id="Qel-8g-Pfc"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="VisualCell" destination="Hul-ur-ttQ" id="ZrH-GV-TAF"/>
+                        <outlet property="simulateTableView" destination="xje-lt-dXa" id="jxr-Cm-B9g"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFW-3f-MsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

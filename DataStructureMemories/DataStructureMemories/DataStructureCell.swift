@@ -14,7 +14,7 @@ class DataStructureCell: UITableViewCell {
 
 extension DataStructureCell: ConfigurableCell {
     
-    func configure(_ model: DataStructEntity) {
+    func configure(with model: DataStructEntity) {
         titleLabel.text = model.titleOfString()
     }
 }

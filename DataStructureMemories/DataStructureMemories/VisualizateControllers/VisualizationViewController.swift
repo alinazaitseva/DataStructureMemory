@@ -10,16 +10,22 @@ import UIKit
 
 class VisualizationViewController: UIViewController {
 
-    public var appointColor: UIColor?
-    public var targetSimulateController: SimulateTableViewController?
+    public var manipulationsWithSimulateController: SimulateTableViewController?
     public var titleVisual: String?
-    
+    public var 
     @IBOutlet weak var stackView: UIStackView!
     
   
     @objc func buttonTouched() {
         print("1")
         print("2")
+    }
+    @objc func buttonPushed() {
+        print("push")
+    }
+    
+    @objc func buttonPoped() {
+        print("pop")
     }
     
     override func viewDidLoad() {
@@ -39,7 +45,7 @@ class VisualizationViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let targetSimulate = segue.destination as? SimulateTableViewController {
-            self.targetSimulateController = targetSimulate
+            self.manipulationsWithSimulateController = targetSimulate
             targetSimulate.numberOfRows = 0
         }
     }
@@ -49,7 +55,8 @@ class VisualizationViewController: UIViewController {
         button.backgroundColor = UIColor.yellow
         button.setTitle(title, for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
-        button.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside); return button
+        button.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside);
+        return button
     }
 }
 

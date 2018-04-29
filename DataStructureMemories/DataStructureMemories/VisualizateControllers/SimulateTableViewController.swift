@@ -10,8 +10,25 @@ import UIKit
 
 class SimulateTableViewController: UITableViewController {
 
-    public var colored: UIColor?
+    @IBOutlet weak var simulateTableView: UITableView!
+    @IBOutlet weak var VisualCell: UITableViewCell!
+    
     public var numberOfRows = 0
+    var listOfValuesInArray: [CurrentCellCondition] = []
+    
+    enum Condition {
+        case forward
+        case previous
+    }
+    
+    class CurrentCellCondition {
+        var value: String?
+        var condition: Condition
+        
+        init(in value: String, with condition: Condition = .forward ) {
+            self.condition = .forward
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +48,27 @@ class SimulateTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VisualCell", for: indexPath)
-
-//        cell.backgroundColor = indexPath.row == 0? .red : .green
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SimulateVisualCell", for: indexPath) as? SimulateVisualCell
+            else { return UITableViewCell() }
+        cell.configureWith(data: listOfValuesInArray[indexPath.row].value! )
+        if listOfValuesInArray[indexPath.row].condition == .forward {
+            cell.setUpUIColor(color: .red)
+        } else {
+            cell.setUpUIColor(color: .clear)
+        }
         return cell
     }
-
+    
+    func addAction(atIndex: Int, value: String) {
+        listOfValuesInArray.insert(CurrentCellCondition(in: value), at: atIndex)
+        tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
+    }
+    
+    func deleteAction(atIndex: Int) {
+        guard listOfValuesInArray.indices.contains(atIndex) else { return }
+        listOfValuesInArray.remove(at: atIndex)
+        tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
