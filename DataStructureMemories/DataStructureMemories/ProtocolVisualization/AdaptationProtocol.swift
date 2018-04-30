@@ -1,4 +1,4 @@
-//
+
 //  AdaptationProtocol.swift
 //  DataStructureMemories
 //
@@ -10,6 +10,5 @@ import Foundation
 import UIKit
 
 protocol AdaptationProtocol {
-    
     func placeButtonsMenu (manager: ATDControlProtocol, view: UIStackView)
 }

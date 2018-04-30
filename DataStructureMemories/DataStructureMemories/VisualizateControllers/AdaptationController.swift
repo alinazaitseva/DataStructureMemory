@@ -12,15 +12,12 @@ import UIKit
 class AdaptationController: AdaptationProtocol {
     
     func placeButtonsMenu(manager: ATDControlProtocol, view: UIStackView) {
-        var placedArray: [TypesOfButtons]
-        placedArray = manager.createButtonsMenu()
-        placedArray.forEach { item in
-            switch item {
-            case .button(let title, let action):
-                view.addArrangedSubview(ActionButton(title: title, action: action))
+        let placedArray: [TypesOfButtons] = manager.createButtonsMenu()
+        placedArray.forEach { value in
+            switch value {
+            case .button(let titleButton, let actionButton):
+                view.addArrangedSubview(ActionButton(title: titleButton, action: actionButton))
             }
         }
     }
-    
-   
 }

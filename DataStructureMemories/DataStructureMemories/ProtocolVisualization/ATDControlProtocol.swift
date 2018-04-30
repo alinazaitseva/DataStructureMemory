@@ -11,5 +11,4 @@ import Foundation
 protocol ATDControlProtocol {
 //    var delegateSimulateController: SimulateProtocol?
     func createButtonsMenu() -> [TypesOfButtons]
-//    func setDelegate()
 }

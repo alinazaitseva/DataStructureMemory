@@ -41,11 +41,10 @@
 		CEC9881020952FAB00984798 /* List(Array)TypeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9880F20952FAB00984798 /* List(Array)TypeStructure.swift */; };
 		CEC9881220952FC500984798 /* MultiSetTypeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9881120952FC500984798 /* MultiSetTypeStructure.swift */; };
 		CEC9881420952FE100984798 /* DictionaryTypeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9881320952FE100984798 /* DictionaryTypeStructure.swift */; };
-		CEC988172095320E00984798 /* VisualizationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC988162095320E00984798 /* VisualizationProtocol.swift */; };
 		CEC988192095324500984798 /* AdaptationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC988182095324500984798 /* AdaptationProtocol.swift */; };
-		CEC9881B2095326500984798 /* MenuViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9881A2095326500984798 /* MenuViewProtocol.swift */; };
 		CECDDECB207F8EFB0072B383 /* DataStructureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */; };
 		CECDDECD207FAB830072B383 /* DataStructureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDDECC207FAB830072B383 /* DataStructureCell.swift */; };
+		CEDAE0502097122F001DA9EB /* SimulateControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAE04F2097122F001DA9EB /* SimulateControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,11 +84,10 @@
 		CEC9880F20952FAB00984798 /* List(Array)TypeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List(Array)TypeStructure.swift"; sourceTree = "<group>"; };
 		CEC9881120952FC500984798 /* MultiSetTypeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSetTypeStructure.swift; sourceTree = "<group>"; };
 		CEC9881320952FE100984798 /* DictionaryTypeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTypeStructure.swift; sourceTree = "<group>"; };
-		CEC988162095320E00984798 /* VisualizationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationProtocol.swift; sourceTree = "<group>"; };
 		CEC988182095324500984798 /* AdaptationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationProtocol.swift; sourceTree = "<group>"; };
-		CEC9881A2095326500984798 /* MenuViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewProtocol.swift; sourceTree = "<group>"; };
 		CECDDECA207F8EFB0072B383 /* DataStructureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableViewController.swift; sourceTree = "<group>"; };
 		CECDDECC207FAB830072B383 /* DataStructureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureCell.swift; sourceTree = "<group>"; };
+		CEDAE04F2097122F001DA9EB /* SimulateControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +126,7 @@
 				CE0DE1B3207F77AD0031F233 /* Main.storyboard */,
 				CE65A6F92080BC7A003FB1E7 /* ProtocolDataStructure */,
 				CE65A6F82080BC6C003FB1E7 /* ModelDataStructure */,
-				CEA4A4B620873A8C0005CA13 /* ControllerDataStructure */,
+				CEA4A4B620873A8C0005CA13 /* Cells */,
 				CECDDECC207FAB830072B383 /* DataStructureCell.swift */,
 				CE79123620966A0800B6F0E7 /* SimulateVisualCell.swift */,
 				CE65A6F22080B661003FB1E7 /* Supporting files */,
@@ -180,7 +178,7 @@
 			path = ProtocolDataStructure;
 			sourceTree = "<group>";
 		};
-		CEA4A4B620873A8C0005CA13 /* ControllerDataStructure */ = {
+		CEA4A4B620873A8C0005CA13 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				CE0E2CAB208E4E1900579AAC /* UIWebNavigationViewController.swift */,
@@ -191,7 +189,7 @@
 				CE69BD36208D3AA900D308CA /* WKWebViewController.swift */,
 				CE69BD38208D3AF500D308CA /* SFSafaryViewController.swift */,
 			);
-			path = ControllerDataStructure;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		CEC988042095286700984798 /* DataTypesClasses */ = {
@@ -214,10 +212,9 @@
 			children = (
 				CE19CA162091D58A00AAC17C /* ATDControlProtocol.swift */,
 				CE79123C209687E700B6F0E7 /* ATDControlFactoryProtocol.swift */,
-				CEC988162095320E00984798 /* VisualizationProtocol.swift */,
 				CEC988182095324500984798 /* AdaptationProtocol.swift */,
-				CEC9881A2095326500984798 /* MenuViewProtocol.swift */,
 				CE791238209674B600B6F0E7 /* SimulateCellProtocol.swift */,
+				CEDAE04F2097122F001DA9EB /* SimulateControllerProtocol.swift */,
 			);
 			path = ProtocolVisualization;
 			sourceTree = "<group>";
@@ -296,7 +293,6 @@
 			files = (
 				CEC9880A20952E8400984798 /* StackTypeStructure.swift in Sources */,
 				CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */,
-				CEC988172095320E00984798 /* VisualizationProtocol.swift in Sources */,
 				CE69BD35208D3A8D00D308CA /* UIWebViewController.swift in Sources */,
 				CE19CA172091D58A00AAC17C /* ATDControlProtocol.swift in Sources */,
 				CE53572C2086014A003D98AF /* DataStructMemory.swift in Sources */,
@@ -326,8 +322,8 @@
 				CECDDECB207F8EFB0072B383 /* DataStructureTableViewController.swift in Sources */,
 				CE19CA0E2091B5AC00AAC17C /* VisualizationViewController.swift in Sources */,
 				CE674F6B2084CE1000E18E5E /* DetailViewController.swift in Sources */,
+				CEDAE0502097122F001DA9EB /* SimulateControllerProtocol.swift in Sources */,
 				CE31124220934F440021B2C6 /* ManagerController.swift in Sources */,
-				CEC9881B2095326500984798 /* MenuViewProtocol.swift in Sources */,
 				CEC9880E20952F5D00984798 /* PriorityQueueTypeStructure.swift in Sources */,
 				CE69BD37208D3AA900D308CA /* WKWebViewController.swift in Sources */,
 			);

@@ -13,17 +13,15 @@ class VisualizationViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     
     public var simulateManipulations: SimulateTableViewController?
-    public var controlManager: ATDControlProtocol
-    public let controllerAdapter: AdaptationProtocol
+    public var controlManager: ATDControlProtocol?
+    public let controllerAdapter: AdaptationProtocol? = nil
     public var titleVisual: String?
   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let title = titleVisual {
             self.navigationItem.title = "\(title)"
         }
-       
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,7 +30,4 @@ class VisualizationViewController: UIViewController {
             targetSimulate.numberOfRows = 0
         }
     }
-
 }
-
-

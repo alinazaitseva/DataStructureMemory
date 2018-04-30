@@ -189,7 +189,6 @@
                         <outlet property="halfHeightConstraint" destination="Dif-Q5-8gK" id="Oh2-mw-BDR"/>
                         <outlet property="heightConstraint" destination="uiE-Sw-UCh" id="D4W-xa-ALE"/>
                         <outlet property="scrollView" destination="s3K-7o-f8w" id="zWz-MN-iqw"/>
-                        <segue destination="ybB-3B-GNO" kind="show" id="jlF-uY-cjl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhQ-dK-VOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDS-Cx-7bs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="670.92391304347836"/>
+            <point key="canvasLocation" x="880" y="806"/>
         </scene>
         <!--Simulate Table View Controller-->
         <scene sceneID="tKG-YE-5DO">
@@ -236,7 +235,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SimulateVisualCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimulateVisualCell" id="Hul-ur-ttQ" customClass="SimulateVisualCell" customModule="DataStructureMemories" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimulateVisualCell" id="Hul-ur-ttQ">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hul-ur-ttQ" id="0KH-Fl-39h">
@@ -257,9 +256,6 @@
                                         <constraint firstAttribute="trailing" secondItem="SJ0-Xr-ZgS" secondAttribute="trailing" id="fo3-9h-jht"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="simulateLabel" destination="SJ0-Xr-ZgS" id="I4u-BE-g7d"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -268,13 +264,12 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="VisualCell" destination="Hul-ur-ttQ" id="ZrH-GV-TAF"/>
                         <outlet property="simulateTableView" destination="xje-lt-dXa" id="jxr-Cm-B9g"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFW-3f-MsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1726" y="668"/>
+            <point key="canvasLocation" x="1572" y="708"/>
         </scene>
         <!--SFSafaryViewController-->
         <scene sceneID="Ren-1J-GGX">

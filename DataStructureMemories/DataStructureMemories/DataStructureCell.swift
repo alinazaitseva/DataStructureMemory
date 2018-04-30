@@ -13,7 +13,6 @@ class DataStructureCell: UITableViewCell {
 }
 
 extension DataStructureCell: ConfigurableCell {
-    
     func configure(with model: DataStructEntity) {
         titleLabel.text = model.titleOfString()
     }

@@ -9,6 +9,5 @@
 import Foundation
 
 protocol SimulateCellProtocol {
-    
     func configureWith(data: String)
 }

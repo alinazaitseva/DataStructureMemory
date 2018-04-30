@@ -11,7 +11,6 @@ import UIKit
 class SimulateTableViewController: UITableViewController {
 
     @IBOutlet weak var simulateTableView: UITableView!
-    @IBOutlet weak var VisualCell: UITableViewCell!
     
     public var numberOfRows = 0
     var listOfValuesInArray: [CurrentCellCondition] = []
@@ -22,8 +21,8 @@ class SimulateTableViewController: UITableViewController {
     }
     
     class CurrentCellCondition {
-        var value: String?
-        var condition: Condition
+        let value: String?
+        let condition: Condition
         
         init(in value: String, with condition: Condition = .forward ) {
             self.condition = .forward
@@ -43,7 +42,6 @@ class SimulateTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
         return numberOfRows
     }
 

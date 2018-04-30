@@ -8,29 +8,10 @@
 
 import Foundation
 
-//class ManagerConrtroller: ATDControlProtocol {
-//    
-//    public var structTypes: DataStructureType
-//   
-//    func createButtonsMenu() -> [TypesOfButtons] {
-//        return
-//    }
-//    
-//    func buttonsCreate() -> TypesOfButtons {
-//        guard let button = TypesOfButtons(rawValue: title) else { return TypeOfButtons.now }
-//    }
-//    return TypesOfButtons(rawValue: title) ?? TypesOfButtons.defaultButton
-//}
-//
-//public var buttons: [TypesOfButtons] {
-//    switch self {
-//    case .stack:
-//        return [.forward, .back]
-//    }
-//    
-//    enum TypesOfButtons: String {
-//        case forward
-//        case back
-//        case defaultButton
-//    }
-//}
+class ManagerConrtroller: ATDControlProtocol {
+    
+    func createButtonsMenu() -> [TypesOfButtons] {
+        <#code#>
+    }
+    
+}
