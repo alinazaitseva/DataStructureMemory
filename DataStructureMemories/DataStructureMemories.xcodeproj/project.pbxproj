@@ -30,6 +30,8 @@
 		CE79123B2096863700B6F0E7 /* TypesOfButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */; };
 		CE79123D209687E700B6F0E7 /* ATDControlFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123C209687E700B6F0E7 /* ATDControlFactoryProtocol.swift */; };
 		CE79123F209689D100B6F0E7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123E209689D100B6F0E7 /* ActionButton.swift */; };
+		CE79124120968EDE00B6F0E7 /* AdaptationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79124020968EDE00B6F0E7 /* AdaptationController.swift */; };
+		CE7912432096942500B6F0E7 /* ControlManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7912422096942500B6F0E7 /* ControlManagerFactory.swift */; };
 		CE8DF64F208602AA00F14AA7 /* DataStructEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DF64E208602AA00F14AA7 /* DataStructEntity.swift */; };
 		CEC9880620952E3B00984798 /* SetTypeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9880520952E3B00984798 /* SetTypeStructure.swift */; };
 		CEC9880820952E5E00984798 /* QueneTypeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9880720952E5E00984798 /* QueneTypeStructure.swift */; };
@@ -72,6 +74,8 @@
 		CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesOfButtons.swift; sourceTree = "<group>"; };
 		CE79123C209687E700B6F0E7 /* ATDControlFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDControlFactoryProtocol.swift; sourceTree = "<group>"; };
 		CE79123E209689D100B6F0E7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		CE79124020968EDE00B6F0E7 /* AdaptationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationController.swift; sourceTree = "<group>"; };
+		CE7912422096942500B6F0E7 /* ControlManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManagerFactory.swift; sourceTree = "<group>"; };
 		CE8DF64E208602AA00F14AA7 /* DataStructEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructEntity.swift; sourceTree = "<group>"; };
 		CEC9880520952E3B00984798 /* SetTypeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTypeStructure.swift; sourceTree = "<group>"; };
 		CEC9880720952E5E00984798 /* QueneTypeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueneTypeStructure.swift; sourceTree = "<group>"; };
@@ -136,10 +140,13 @@
 		CE19CA112091D33000AAC17C /* VisualizateControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */,
 				CE19CA0D2091B5AC00AAC17C /* VisualizationViewController.swift */,
 				CE19CA0F2091B63400AAC17C /* SimulateTableViewController.swift */,
 				CE31124120934F440021B2C6 /* ManagerController.swift */,
 				CE79123E209689D100B6F0E7 /* ActionButton.swift */,
+				CE79124020968EDE00B6F0E7 /* AdaptationController.swift */,
+				CE7912422096942500B6F0E7 /* ControlManagerFactory.swift */,
 			);
 			path = VisualizateControllers;
 			sourceTree = "<group>";
@@ -207,7 +214,6 @@
 			children = (
 				CE19CA162091D58A00AAC17C /* ATDControlProtocol.swift */,
 				CE79123C209687E700B6F0E7 /* ATDControlFactoryProtocol.swift */,
-				CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */,
 				CEC988162095320E00984798 /* VisualizationProtocol.swift */,
 				CEC988182095324500984798 /* AdaptationProtocol.swift */,
 				CEC9881A2095326500984798 /* MenuViewProtocol.swift */,
@@ -306,7 +312,9 @@
 				CE0DE1B0207F77AD0031F233 /* AppDelegate.swift in Sources */,
 				CE8DF64F208602AA00F14AA7 /* DataStructEntity.swift in Sources */,
 				CE19CA102091B63400AAC17C /* SimulateTableViewController.swift in Sources */,
+				CE7912432096942500B6F0E7 /* ControlManagerFactory.swift in Sources */,
 				CE69BD39208D3AF500D308CA /* SFSafaryViewController.swift in Sources */,
+				CE79124120968EDE00B6F0E7 /* AdaptationController.swift in Sources */,
 				CEC988192095324500984798 /* AdaptationProtocol.swift in Sources */,
 				CECDDECD207FAB830072B383 /* DataStructureCell.swift in Sources */,
 				CE0E2CAE208E4E8800579AAC /* WKWebNavigationViewController.swift in Sources */,
