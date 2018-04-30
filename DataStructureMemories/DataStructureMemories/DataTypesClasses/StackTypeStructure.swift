@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class StackTypeStructure: ControlManagerProtocol {
+    var delegateSimulateController: SimulateControllerProtocol?
+    
+    func createButtonsMenu() -> [TypesOfButtons] {
+        <#code#>
+    }
+    private func addValue() {
+        guard let simulateData = delegateSimulateController else { return }
+        let indexOfLabel = simulateData
+    }
+    
+}

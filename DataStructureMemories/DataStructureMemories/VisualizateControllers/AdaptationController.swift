@@ -11,7 +11,7 @@ import UIKit
 
 class AdaptationController: AdaptationProtocol {
     
-    func placeButtonsMenu(manager: ATDControlProtocol, view: UIStackView) {
+    func placeButtonsMenu(manager: ControlManagerProtocol, view: UIStackView) {
         let placedArray: [TypesOfButtons] = manager.createButtonsMenu()
         placedArray.forEach { value in
             switch value {

@@ -15,8 +15,8 @@
 		CE0E2CAE208E4E8800579AAC /* WKWebNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E2CAD208E4E8800579AAC /* WKWebNavigationViewController.swift */; };
 		CE19CA0E2091B5AC00AAC17C /* VisualizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA0D2091B5AC00AAC17C /* VisualizationViewController.swift */; };
 		CE19CA102091B63400AAC17C /* SimulateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA0F2091B63400AAC17C /* SimulateTableViewController.swift */; };
-		CE19CA172091D58A00AAC17C /* ATDControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA162091D58A00AAC17C /* ATDControlProtocol.swift */; };
-		CE31124220934F440021B2C6 /* ManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31124120934F440021B2C6 /* ManagerController.swift */; };
+		CE19CA172091D58A00AAC17C /* ControlManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA162091D58A00AAC17C /* ControlManagerProtocol.swift */; };
+		CE31124220934F440021B2C6 /* ManagerControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31124120934F440021B2C6 /* ManagerControllers.swift */; };
 		CE53572C2086014A003D98AF /* DataStructMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53572B2086014A003D98AF /* DataStructMemory.swift */; };
 		CE65A6F42080B702003FB1E7 /* DataStructMemorySorce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */; };
 		CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */; };
@@ -28,10 +28,9 @@
 		CE79123720966A0800B6F0E7 /* SimulateVisualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123620966A0800B6F0E7 /* SimulateVisualCell.swift */; };
 		CE791239209674B600B6F0E7 /* SimulateCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE791238209674B600B6F0E7 /* SimulateCellProtocol.swift */; };
 		CE79123B2096863700B6F0E7 /* TypesOfButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */; };
-		CE79123D209687E700B6F0E7 /* ATDControlFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123C209687E700B6F0E7 /* ATDControlFactoryProtocol.swift */; };
+		CE79123D209687E700B6F0E7 /* ControlFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123C209687E700B6F0E7 /* ControlFactoryProtocol.swift */; };
 		CE79123F209689D100B6F0E7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123E209689D100B6F0E7 /* ActionButton.swift */; };
 		CE79124120968EDE00B6F0E7 /* AdaptationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79124020968EDE00B6F0E7 /* AdaptationController.swift */; };
-		CE7912432096942500B6F0E7 /* ControlManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7912422096942500B6F0E7 /* ControlManagerFactory.swift */; };
 		CE8DF64F208602AA00F14AA7 /* DataStructEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DF64E208602AA00F14AA7 /* DataStructEntity.swift */; };
 		CEC9880620952E3B00984798 /* SetTypeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9880520952E3B00984798 /* SetTypeStructure.swift */; };
 		CEC9880820952E5E00984798 /* QueneTypeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9880720952E5E00984798 /* QueneTypeStructure.swift */; };
@@ -58,8 +57,8 @@
 		CE0E2CAD208E4E8800579AAC /* WKWebNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebNavigationViewController.swift; sourceTree = "<group>"; };
 		CE19CA0D2091B5AC00AAC17C /* VisualizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewController.swift; sourceTree = "<group>"; };
 		CE19CA0F2091B63400AAC17C /* SimulateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateTableViewController.swift; sourceTree = "<group>"; };
-		CE19CA162091D58A00AAC17C /* ATDControlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDControlProtocol.swift; sourceTree = "<group>"; };
-		CE31124120934F440021B2C6 /* ManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerController.swift; sourceTree = "<group>"; };
+		CE19CA162091D58A00AAC17C /* ControlManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManagerProtocol.swift; sourceTree = "<group>"; };
+		CE31124120934F440021B2C6 /* ManagerControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerControllers.swift; sourceTree = "<group>"; };
 		CE53572B2086014A003D98AF /* DataStructMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemory.swift; sourceTree = "<group>"; };
 		CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemorySorce.swift; sourceTree = "<group>"; };
 		CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemoryList.swift; sourceTree = "<group>"; };
@@ -71,10 +70,9 @@
 		CE79123620966A0800B6F0E7 /* SimulateVisualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateVisualCell.swift; sourceTree = "<group>"; };
 		CE791238209674B600B6F0E7 /* SimulateCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateCellProtocol.swift; sourceTree = "<group>"; };
 		CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesOfButtons.swift; sourceTree = "<group>"; };
-		CE79123C209687E700B6F0E7 /* ATDControlFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDControlFactoryProtocol.swift; sourceTree = "<group>"; };
+		CE79123C209687E700B6F0E7 /* ControlFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlFactoryProtocol.swift; sourceTree = "<group>"; };
 		CE79123E209689D100B6F0E7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		CE79124020968EDE00B6F0E7 /* AdaptationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationController.swift; sourceTree = "<group>"; };
-		CE7912422096942500B6F0E7 /* ControlManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManagerFactory.swift; sourceTree = "<group>"; };
 		CE8DF64E208602AA00F14AA7 /* DataStructEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructEntity.swift; sourceTree = "<group>"; };
 		CEC9880520952E3B00984798 /* SetTypeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTypeStructure.swift; sourceTree = "<group>"; };
 		CEC9880720952E5E00984798 /* QueneTypeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueneTypeStructure.swift; sourceTree = "<group>"; };
@@ -120,15 +118,14 @@
 		CE0DE1AE207F77AD0031F233 /* DataStructureMemories */ = {
 			isa = PBXGroup;
 			children = (
+				CEDAE05120974FEC001DA9EB /* Cells */,
 				CEC988152095311A00984798 /* ProtocolVisualization */,
 				CEC988042095286700984798 /* DataTypesClasses */,
 				CE19CA112091D33000AAC17C /* VisualizateControllers */,
 				CE0DE1B3207F77AD0031F233 /* Main.storyboard */,
 				CE65A6F92080BC7A003FB1E7 /* ProtocolDataStructure */,
 				CE65A6F82080BC6C003FB1E7 /* ModelDataStructure */,
-				CEA4A4B620873A8C0005CA13 /* Cells */,
-				CECDDECC207FAB830072B383 /* DataStructureCell.swift */,
-				CE79123620966A0800B6F0E7 /* SimulateVisualCell.swift */,
+				CEA4A4B620873A8C0005CA13 /* DataStructureViewControllers */,
 				CE65A6F22080B661003FB1E7 /* Supporting files */,
 				CE0DE1BB207F77AD0031F233 /* Info.plist */,
 			);
@@ -141,10 +138,8 @@
 				CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */,
 				CE19CA0D2091B5AC00AAC17C /* VisualizationViewController.swift */,
 				CE19CA0F2091B63400AAC17C /* SimulateTableViewController.swift */,
-				CE31124120934F440021B2C6 /* ManagerController.swift */,
 				CE79123E209689D100B6F0E7 /* ActionButton.swift */,
 				CE79124020968EDE00B6F0E7 /* AdaptationController.swift */,
-				CE7912422096942500B6F0E7 /* ControlManagerFactory.swift */,
 			);
 			path = VisualizateControllers;
 			sourceTree = "<group>";
@@ -178,7 +173,7 @@
 			path = ProtocolDataStructure;
 			sourceTree = "<group>";
 		};
-		CEA4A4B620873A8C0005CA13 /* Cells */ = {
+		CEA4A4B620873A8C0005CA13 /* DataStructureViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				CE0E2CAB208E4E1900579AAC /* UIWebNavigationViewController.swift */,
@@ -189,20 +184,21 @@
 				CE69BD36208D3AA900D308CA /* WKWebViewController.swift */,
 				CE69BD38208D3AF500D308CA /* SFSafaryViewController.swift */,
 			);
-			path = Cells;
+			path = DataStructureViewControllers;
 			sourceTree = "<group>";
 		};
 		CEC988042095286700984798 /* DataTypesClasses */ = {
 			isa = PBXGroup;
 			children = (
-				CEC9880520952E3B00984798 /* SetTypeStructure.swift */,
-				CEC9880720952E5E00984798 /* QueneTypeStructure.swift */,
 				CEC9880920952E8400984798 /* StackTypeStructure.swift */,
+				CEC9880720952E5E00984798 /* QueneTypeStructure.swift */,
+				CEC9880520952E3B00984798 /* SetTypeStructure.swift */,
 				CEC9880B20952F0C00984798 /* DequeueTypeStructure.swift */,
 				CEC9880D20952F5D00984798 /* PriorityQueueTypeStructure.swift */,
 				CEC9880F20952FAB00984798 /* List(Array)TypeStructure.swift */,
 				CEC9881120952FC500984798 /* MultiSetTypeStructure.swift */,
 				CEC9881320952FE100984798 /* DictionaryTypeStructure.swift */,
+				CE31124120934F440021B2C6 /* ManagerControllers.swift */,
 			);
 			path = DataTypesClasses;
 			sourceTree = "<group>";
@@ -210,13 +206,22 @@
 		CEC988152095311A00984798 /* ProtocolVisualization */ = {
 			isa = PBXGroup;
 			children = (
-				CE19CA162091D58A00AAC17C /* ATDControlProtocol.swift */,
-				CE79123C209687E700B6F0E7 /* ATDControlFactoryProtocol.swift */,
+				CE19CA162091D58A00AAC17C /* ControlManagerProtocol.swift */,
+				CE79123C209687E700B6F0E7 /* ControlFactoryProtocol.swift */,
 				CEC988182095324500984798 /* AdaptationProtocol.swift */,
 				CE791238209674B600B6F0E7 /* SimulateCellProtocol.swift */,
 				CEDAE04F2097122F001DA9EB /* SimulateControllerProtocol.swift */,
 			);
 			path = ProtocolVisualization;
+			sourceTree = "<group>";
+		};
+		CEDAE05120974FEC001DA9EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CECDDECC207FAB830072B383 /* DataStructureCell.swift */,
+				CE79123620966A0800B6F0E7 /* SimulateVisualCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +299,7 @@
 				CEC9880A20952E8400984798 /* StackTypeStructure.swift in Sources */,
 				CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */,
 				CE69BD35208D3A8D00D308CA /* UIWebViewController.swift in Sources */,
-				CE19CA172091D58A00AAC17C /* ATDControlProtocol.swift in Sources */,
+				CE19CA172091D58A00AAC17C /* ControlManagerProtocol.swift in Sources */,
 				CE53572C2086014A003D98AF /* DataStructMemory.swift in Sources */,
 				CEC9880820952E5E00984798 /* QueneTypeStructure.swift in Sources */,
 				CE79123F209689D100B6F0E7 /* ActionButton.swift in Sources */,
@@ -302,13 +307,12 @@
 				CE79123B2096863700B6F0E7 /* TypesOfButtons.swift in Sources */,
 				CEC9881420952FE100984798 /* DictionaryTypeStructure.swift in Sources */,
 				CE79123720966A0800B6F0E7 /* SimulateVisualCell.swift in Sources */,
-				CE79123D209687E700B6F0E7 /* ATDControlFactoryProtocol.swift in Sources */,
+				CE79123D209687E700B6F0E7 /* ControlFactoryProtocol.swift in Sources */,
 				CE791239209674B600B6F0E7 /* SimulateCellProtocol.swift in Sources */,
 				CEC9881220952FC500984798 /* MultiSetTypeStructure.swift in Sources */,
 				CE0DE1B0207F77AD0031F233 /* AppDelegate.swift in Sources */,
 				CE8DF64F208602AA00F14AA7 /* DataStructEntity.swift in Sources */,
 				CE19CA102091B63400AAC17C /* SimulateTableViewController.swift in Sources */,
-				CE7912432096942500B6F0E7 /* ControlManagerFactory.swift in Sources */,
 				CE69BD39208D3AF500D308CA /* SFSafaryViewController.swift in Sources */,
 				CE79124120968EDE00B6F0E7 /* AdaptationController.swift in Sources */,
 				CEC988192095324500984798 /* AdaptationProtocol.swift in Sources */,
@@ -323,7 +327,7 @@
 				CE19CA0E2091B5AC00AAC17C /* VisualizationViewController.swift in Sources */,
 				CE674F6B2084CE1000E18E5E /* DetailViewController.swift in Sources */,
 				CEDAE0502097122F001DA9EB /* SimulateControllerProtocol.swift in Sources */,
-				CE31124220934F440021B2C6 /* ManagerController.swift in Sources */,
+				CE31124220934F440021B2C6 /* ManagerControllers.swift in Sources */,
 				CEC9880E20952F5D00984798 /* PriorityQueueTypeStructure.swift in Sources */,
 				CE69BD37208D3AA900D308CA /* WKWebViewController.swift in Sources */,
 			);

@@ -25,6 +25,7 @@ class SimulateTableViewController: UITableViewController {
         let condition: Condition
         
         init(in value: String, with condition: Condition = .forward ) {
+            self.value = value
             self.condition = .forward
         }
     }

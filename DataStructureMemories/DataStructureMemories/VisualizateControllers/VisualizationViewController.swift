@@ -13,21 +13,53 @@ class VisualizationViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     
     public var simulateManipulations: SimulateTableViewController?
-    public var controlManager: ATDControlProtocol?
-    public let controllerAdapter: AdaptationProtocol? = nil
+    public var controlManager: ControlManagerProtocol?
+    public var simulateData: SimulateControllerProtocol!
+    let adaptation: AdaptationProtocol = AdaptationController()
+    
     public var titleVisual: String?
-  
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let targetSimulatePath = segue.destination as? SimulateTableViewController {
+            self.simulateManipulations = targetSimulatePath
+            simulateData = simulateManipulations as! SimulateControllerProtocol
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let title = titleVisual {
-            self.navigationItem.title = "\(title)"
-        }
+        guard let simulateData = simulateData else { return }
+        
+        adaptation.placeButtonsMenu(manager: controlManager!, view: stackView)
+    
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let targetSimulate = segue.destination as? SimulateTableViewController {
-            self.simulateManipulations = targetSimulate
-            targetSimulate.numberOfRows = 0
-        }
-    }
+  
 }
+
+
+//class VisualizationController: UIViewController {
+//
+//    @IBOutlet weak var viewMenu: UIStackView!
+//    var fakeData: FakeDataProtocol?
+//    var controlManager: ControlManagerProtocol!
+//    let adapter: AdapterProtocol = Adapter()
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toTable"
+//        {
+//            if let controller = segue.destination as? FakeDataController {
+//                fakeData = controller
+//            }
+//        }
+//    }
+//
+//    override func viewDidLoad() {
+//        guard let fakeData = fakeData else { return }
+//
+//        //        controlManager.setDelegate(delegeteFakeData: fakeData)
+//        controlManager.delegeteFakeData = fakeData
+//        adapter.createMenu(manager: controlManager, view: viewMenu)
+//    }
+//
+//}
+

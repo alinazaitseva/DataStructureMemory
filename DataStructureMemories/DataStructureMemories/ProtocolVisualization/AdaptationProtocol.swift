@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 protocol AdaptationProtocol {
-    func placeButtonsMenu (manager: ATDControlProtocol, view: UIStackView)
+    func placeButtonsMenu (manager: ControlManagerProtocol, view: UIStackView)
 }

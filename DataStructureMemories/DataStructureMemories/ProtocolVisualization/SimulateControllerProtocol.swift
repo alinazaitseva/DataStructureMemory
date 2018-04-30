@@ -11,4 +11,6 @@ import Foundation
 protocol SimulateControllerProtocol {
     func addAction(atIndex: Int, value: String)
     func deleteAction(atIndex: Int)
+    func getElement(byIndex: Int) -> String?
+    func getLength() -> Int
 }
