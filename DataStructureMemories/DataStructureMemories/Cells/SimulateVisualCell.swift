@@ -18,9 +18,9 @@ class SimulateVisualCell: UITableViewCell {
     }
 }
 
-extension SimulateVisualCell: SimulateCellProtocol {
-    func configureWith(data: String) {
-        self.simulateLabel.text  = data
-    }
-    
-}
+//extension SimulateVisualCell: SimulateCellProtocol {
+//    func configureWith(data: String) {
+//        self.simulateLabel.text  = data
+//    }
+
+//}

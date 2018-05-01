@@ -37,7 +37,6 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print(indexPath.row)
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailViewController = storyboard.instantiateViewController(withIdentifier:  "DetailViewController") as! DetailViewController
         let selectedCell = DataStructEntity(title: dataStructureManipulatios.getValueInDataSource(item: indexPath.row), description: dataStructureManipulatios.descriptOfDataStructure[indexPath.row], link: dataStructureManipulatios.wikiLinks[indexPath.row])

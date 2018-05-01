@@ -8,11 +8,9 @@
 
 import Foundation
 
-class SetTypeStructure :ControlManagerProtocol {
-    var delegateSimulateController: SimulateControllerProtocol?
-    func createButtonsMenu() -> [TypesOfButtons] {
-        
-    }
-    
-    
-}
+//class SetTypeStructure :ControlManagerProtocol {
+//    var delegateSimulateController: SimulateControllerProtocol?
+//    func createButtonsMenu() -> [TypesOfButtons] {
+//        
+//    }
+//}

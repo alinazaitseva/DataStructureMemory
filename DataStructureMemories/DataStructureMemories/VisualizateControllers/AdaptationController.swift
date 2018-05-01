@@ -11,9 +11,9 @@ import UIKit
 
 class AdaptationController: AdaptationProtocol {
     
-    func placeButtonsMenu(manager: ControlManagerProtocol, view: UIStackView) {
-        let placedArray: [TypesOfButtons] = manager.createButtonsMenu()
-        placedArray.forEach { value in
+    func placeButtonsMenu(with: ControlManagerProtocol, view: UIStackView) {
+        let buttonArray: [TypesOfButtons] = with.createButtonsMenu()
+        buttonArray.forEach { value in
             switch value {
             case .button(let titleButton, let actionButton):
                 view.addArrangedSubview(ActionButton(title: titleButton, action: actionButton))

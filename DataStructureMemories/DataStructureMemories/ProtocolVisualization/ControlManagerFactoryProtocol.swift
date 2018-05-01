@@ -1,5 +1,5 @@
 //
-//  SimulateCellProtocol.swift
+//  ATDControlFactoryProtocol.swift
 //  DataStructureMemories
 //
 //  Created by Alina Zaitseva on 4/30/18.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-//protocol SimulateCellProtocol {
-//    func configureWith(data: String)
-//}
+protocol ControlManagerFactoryProtocol {
+    func getManagerController(title: ATDTypes) -> ControlManagerProtocol
+}
