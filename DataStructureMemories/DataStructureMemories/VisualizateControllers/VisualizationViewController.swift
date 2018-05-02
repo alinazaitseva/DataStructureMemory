@@ -12,24 +12,21 @@ class VisualizationViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
     
-    public var simulateManipulations: SimulateTableViewController?
-    public var controlManager: ControlManagerProtocol?
-    public var simulateData: SimulateControllerProtocol!
-    let adaptation: AdaptationProtocol = AdaptationController()
-    
-    public var titleVisual: String?
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let targetSimulatePath = segue.destination as? SimulateTableViewController {
-            self.simulateManipulations = targetSimulatePath
+    public var simulateData: SimulateControllerProtocol?
+    public var controlManager: ControlManagerProtocol!
+    let adapter: AdaptationProtocol = AdaptationController()
 
-        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+            if segue.identifier == "showSimulate", let simulateDataController = segue.destination as? SimulateTableViewController {
+                simulateData = simulateDataController
+            }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let simulateData = simulateData else { return }
-        controlManager?.delegateSimulateController = simulateData
-        adaptation.placeButtonsMenu(with: controlManager!, view: stackView)
+        controlManager.delegateSimulateController = simulateData
+        adapter.createButtonsMenu(with: controlManager, view: stackView)
     
     }
 }

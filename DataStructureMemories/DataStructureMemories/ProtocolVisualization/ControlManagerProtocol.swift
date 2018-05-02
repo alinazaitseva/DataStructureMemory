@@ -9,7 +9,6 @@
 import Foundation
 
 protocol ControlManagerProtocol {
-    var delegateSimulateController: SimulateControllerProtocol? {get set}
-    func createButtonsMenu() -> [TypesOfButtons]
-    
+    var delegateSimulateController: SimulateControllerProtocol? { get set }
+    var buttonsMenu: [TypesOfButtons] { get }
 }

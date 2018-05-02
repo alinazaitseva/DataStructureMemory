@@ -113,7 +113,6 @@ class DetailViewController: UIViewController {
         let mainStoryboard = UIStoryboard( name: "Main", bundle: nil )
         guard let visualizeViewController = mainStoryboard.instantiateViewController(withIdentifier: "VisualizationViewController") as? VisualizationViewController else { return }
         
-        
         self.navigationController?.pushViewController(visualizeViewController, animated: true)
     }
 }

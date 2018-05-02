@@ -9,8 +9,7 @@
 import Foundation
 
 protocol SimulateControllerProtocol: class {
-    func addAction(atIndex: Int, value: Int)
+    func addAction(atIndex: Int, value: String)
     func deleteAction(atIndex: Int)
-    func getElement(byIndex: Int) -> Int?
-    func getLength() -> Int
+
 }

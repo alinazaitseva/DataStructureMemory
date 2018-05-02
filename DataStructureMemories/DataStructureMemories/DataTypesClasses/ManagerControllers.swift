@@ -8,16 +8,14 @@
 
 import Foundation
 
-//class ManagerContoller: ControlFactoryProtocol {
-//    func getManagerController(title: String) -> ControlManagerProtocol {
-//        switch title {
-//        case "Stack":
-//            return SetTypeStructure()
-//            
-//        default: SetTypeStructure()
-//            return
-//        }
-//    }
-//    
-//}
+class ManagerContoller: ControlManagerFactoryProtocol {
+    func getManagerController(type: ATDTypes) -> ControlManagerProtocol {
+        switch type {
+        case .stack:
+            return StackTypeStructure()
+        default:
+            return StackTypeStructure()
+        }
+    }
+}
 

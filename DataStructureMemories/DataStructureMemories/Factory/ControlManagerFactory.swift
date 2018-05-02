@@ -9,11 +9,11 @@
 import Foundation
 
 class ControlManagerFactory: ControlManagerFactoryProtocol {
-    func getManagerController(title: ATDTypes) -> ControlManagerProtocol {
-        switch title {
+    func getManagerController(type: ATDTypes) -> ControlManagerProtocol {
+        switch type {
         case .stack: do {
             return StackTypeStructure()
-            }
+        }
         default:
             return StackTypeStructure()
         }

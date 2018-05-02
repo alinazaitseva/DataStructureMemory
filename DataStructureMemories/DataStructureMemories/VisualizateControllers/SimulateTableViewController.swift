@@ -13,74 +13,42 @@ class SimulateTableViewController: UITableViewController, SimulateControllerProt
     @IBOutlet weak var simulateTableView: UITableView!
     
     public var numberOfRows = 0
-    var listOfValuesInArray: [CurrentCellCondition] = []
-    
-    enum Condition {
-        case forward
-        case previous
-    }
-    
-    class CurrentCellCondition {
-        let value: Int?
-        let condition: Condition
-        
-        init(in value: Int, with condition: Condition = .forward ) {
-            self.value = value
-            self.condition = .forward
-        }
-    }
+    var buttonsArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    func addAction(atIndex: Int, value: String) {
+        buttonsArray.insert( value, at: atIndex)
+        tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
+    }
+    
+    func deleteAction(atIndex: Int) {
+        guard buttonsArray.indices.contains(atIndex) else { return }
+        buttonsArray.remove(at: atIndex)
+        tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfRows
+        return buttonsArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SimulateVisualCell", for: indexPath) as? SimulateVisualCell
             else { return UITableViewCell() }
        
-//        cell.configureWith(data: listOfValuesInArray[indexPath.row].value )
-        
-        if listOfValuesInArray[indexPath.row].condition == .forward {
-            cell.setUpUIColor(color: .red)
-        } else {
-            cell.setUpUIColor(color: .clear)
-        }
+        cell.configureWith(data: buttonsArray[indexPath.row])
+
         return cell
-    }
-    
-    func addAction(atIndex: Int, value: Int) {
-        listOfValuesInArray.insert(CurrentCellCondition(in: value), at: atIndex)
-        tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
-    }
-    
-    func getElement(byIndex: Int) -> Int? {
-        if listOfValuesInArray.indices.contains(byIndex) {
-            return listOfValuesInArray[byIndex].value
-        } else {
-            return nil
-        }
-    }
-    
-    func deleteAction(atIndex: Int) {
-        guard listOfValuesInArray.indices.contains(atIndex) else { return }
-        listOfValuesInArray.remove(at: atIndex)
-        tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
-    }
-    
-    func getLength() -> Int {
-        return listOfValuesInArray.count
     }
     
     

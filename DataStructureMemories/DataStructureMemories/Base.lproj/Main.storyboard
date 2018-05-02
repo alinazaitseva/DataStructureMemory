@@ -207,7 +207,7 @@
                                 <rect key="frame" x="0.0" y="220" width="414" height="516"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="cla-aU-m6Z" kind="embed" id="dbg-Ce-pS5"/>
+                                    <segue destination="cla-aU-m6Z" kind="embed" identifier="showSimulate" id="dbg-Ce-pS5"/>
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zeM-5V-mIP">
@@ -269,7 +269,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFW-3f-MsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1572" y="708"/>
+            <point key="canvasLocation" x="1712" y="805"/>
         </scene>
         <!--SFSafaryViewController-->
         <scene sceneID="Ren-1J-GGX">

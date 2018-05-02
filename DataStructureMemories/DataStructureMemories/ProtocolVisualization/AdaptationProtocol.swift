@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 protocol AdaptationProtocol {
-    func placeButtonsMenu (with: ControlManagerProtocol, view: UIStackView)
+    func createButtonsMenu (with: ControlManagerProtocol, view: UIStackView)
 }

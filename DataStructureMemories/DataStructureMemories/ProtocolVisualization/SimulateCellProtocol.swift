@@ -8,6 +8,6 @@
 
 import Foundation
 
-//protocol SimulateCellProtocol {
-//    func configureWith(data: String)
-//}
+protocol SimulateCellProtocol {
+    func configureWith(data: String)
+}

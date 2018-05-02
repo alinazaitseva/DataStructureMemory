@@ -9,38 +9,39 @@
 import Foundation
 
 class StackTypeStructure: ControlManagerProtocol {
-   
     var delegateSimulateController: SimulateControllerProtocol?
     
-    func createButtonsMenu() -> [TypesOfButtons] {
-        var arrayItems: Array<TypesOfButtons> = []
-       
-        arrayItems.append(TypesOfButtons.button(title: "Push") {
-            self.add()
-        })
-            arrayItems.append(TypesOfButtons.button(title: "Pop") {
-                self.delete()
-        })
-           return arrayItems
+    var buttonsMenu: [TypesOfButtons] {
+        var buttonsArray: Array<TypesOfButtons> = []
+        buttonsArray.append(TypesOfButtons.button(title: "PUSH", action: add ))
+        buttonsArray.append(TypesOfButtons.button(title: "POP", action: delete ))
+        return buttonsArray
     }
     
+    weak var delegateSimulateData: SimulateControllerProtocol?
+    let usingModel = SimulateModelCell()
+    
     private func add() {
-        guard let simulateData = delegateSimulateController else { return }
+        guard let simulateData = delegateSimulateData else { return }
         
-        let index = simulateData.getLength() - 1
-        if simulateData.getElement(byIndex: index) != nil {
-            guard let value = simulateData.getElement(byIndex: 0)
-                else { return }
-            let newValue = value + 1
-            simulateData.addAction(atIndex: 0, value: newValue)
-            
+        let index = 0
+        
+        guard let elementInStack = usingModel.getElement(atIndex: index) else {
+            let newElementInStack = CellConditionEntity(value: 0)
+            usingModel.add(atIndex: index, element: newElementInStack)
+            simulateData.addAction(atIndex: index, value: newElementInStack.convertToString())
+            return
         }
-        else {
-            simulateData.addAction(atIndex: 0, value: 0)
-        }
+       let newElement = CellConditionEntity(value: elementInStack.value+1)
+        usingModel.add(atIndex: index, element: newElement)
+        simulateData.addAction(atIndex: index, value: newElement.convertToString())
     }
+    
     private func delete() {
-        delegateSimulateController?.deleteAction(atIndex: 0)
+        guard let simulateData = delegateSimulateData else { return }
+        usingModel.delete(atIndex: 0)
+        simulateData.deleteAction(atIndex: 0)
     }
-
+    
 }
+

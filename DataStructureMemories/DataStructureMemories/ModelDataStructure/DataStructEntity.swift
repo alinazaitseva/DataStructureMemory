@@ -13,7 +13,6 @@ class DataStructEntity: DataStructMemory {
     private let title: String
     private let description: String
     private let link: String
-//    private let typesOfATD: ATDTypes
     
     func titleOfString() -> String {
         return title.self
@@ -25,27 +24,11 @@ class DataStructEntity: DataStructMemory {
     func getWikiLink() -> String {
         return link.self
     }
-//    var type: ATDTypes {
-//        get {
-//            return self.typesOfATD
-//        }
-//    }
     
     init(title: String, description: String, link: String) {
         self.title = title
         self.description = description
         self.link = link
-//        self.typesOfATD = type
+
     }
 }
-
-    enum ATDTypes {
-        case stack
-        case queue
-        case set
-        case dequeue
-        case priorityQueue
-        case list
-        case multiSet
-        case dictionary
-    }

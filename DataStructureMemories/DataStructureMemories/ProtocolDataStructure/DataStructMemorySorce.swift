@@ -12,7 +12,6 @@ protocol DataStructureMemorySource {
     
     func getValueInDataSource(item: Int) -> String
     func getAmountOfValuesInDataSorce() -> Int
-
 }
 
 
