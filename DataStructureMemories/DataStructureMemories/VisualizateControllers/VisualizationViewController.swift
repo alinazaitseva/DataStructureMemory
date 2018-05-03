@@ -13,7 +13,7 @@ class VisualizationViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     
     public var simulateData: SimulateControllerProtocol?
-    public var controlManager: ControlManagerProtocol!
+    public var controlManager: ControlManagerProtocol?
     let adapter: AdaptationProtocol = AdaptationController()
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -25,8 +25,8 @@ class VisualizationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let simulateData = simulateData else { return }
-        controlManager.delegateSimulateController = simulateData
-        adapter.createButtonsMenu(with: controlManager, view: stackView)
+        controlManager?.delegateSimulateController = simulateData 
+        adapter.createButtonsMenu(with: controlManager!, view: stackView)
     
     }
 }
