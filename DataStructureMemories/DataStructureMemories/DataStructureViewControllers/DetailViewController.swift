@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var buttonWiki: UIButton!
     
     public var srtuctureCell: DataStructMemory?
+    public var factoryEntity = ControlManagerFactory()
     
     var isShowingText = false
     
@@ -112,7 +113,8 @@ class DetailViewController: UIViewController {
     @IBAction func buttonVisualize(_ sender: UIButton) {
         let mainStoryboard = UIStoryboard( name: "Main", bundle: nil )
         guard let visualizeViewController = mainStoryboard.instantiateViewController(withIdentifier: "VisualizationViewController") as? VisualizationViewController else { return }
-        
+        visualizeViewController.controlManager = factoryEntity.getManagerController(type: .stack)
+//        visualController.controlManager = ControlManagerFactory.getControlManager(type: modelEntity.type)
         self.navigationController?.pushViewController(visualizeViewController, animated: true)
     }
 }

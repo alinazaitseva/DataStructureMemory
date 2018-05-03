@@ -114,6 +114,7 @@
 			children = (
 				CE0DE1AE207F77AD0031F233 /* DataStructureMemories */,
 				CE0DE1AD207F77AD0031F233 /* Products */,
+				CE18D738209B23D2009AB628 /* New Group */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +145,13 @@
 				CE0DE1BB207F77AD0031F233 /* Info.plist */,
 			);
 			path = DataStructureMemories;
+			sourceTree = "<group>";
+		};
+		CE18D738209B23D2009AB628 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CE19CA112091D33000AAC17C /* VisualizateControllers */ = {

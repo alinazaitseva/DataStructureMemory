@@ -22,6 +22,7 @@ class StackTypeStructure: ControlManagerProtocol {
     let usingModel = SimulateModelCell()
     
     private func add() {
+        print("1")
         guard let simulateData = delegateSimulateData else { return }
         
         let index = 0
