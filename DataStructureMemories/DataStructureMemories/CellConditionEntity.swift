@@ -11,13 +11,14 @@ import Foundation
 struct CellConditionEntity {
     let value: Int
     let descriptionValue: String
-    let condition: Condition
-    var listOfValuesInArray: [CellConditionEntity] = []
+    let extraValue: String
+    let inputedValue: String
    
-    init (value: Int = 0, descriptionValue: String = "item" ) {
+    init (value: Int = 0, descriptionValue: String = "", extraValue: String = "", inputedValue: String = ""  ) {
         self.value = value
         self.descriptionValue = ""
-        self.condition = .forward
+        self.extraValue = ""
+        self.inputedValue = ""
     }
     
     func convertToString() -> String {
@@ -27,13 +28,10 @@ struct CellConditionEntity {
         } else {
              result += self.descriptionValue + ": " + String(self.value)
         }
+        if self.extraValue != "" {
+            result += ", " + self.descriptionValue + ": " + String(self.extraValue)
+                    }
          return result  
     }
-   
-}
-
-enum Condition {
-    case forward
-    case previous
 }
 

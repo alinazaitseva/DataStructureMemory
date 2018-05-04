@@ -12,7 +12,7 @@ class DataStructMemoryList: DataStructureMemorySource{
  
     var listOfDataStructure: [String] {
         
-        return ["Stack","Queue","Set","Dequeue","Priority Queue","List(Array)", "MultiSet","Dictionary"]
+        return ["Stack","Queue","Set","Dequeue","Priority Queue","List", "MultiSet","Dictionary"]
     }
     
     var wikiLinks: [String] {

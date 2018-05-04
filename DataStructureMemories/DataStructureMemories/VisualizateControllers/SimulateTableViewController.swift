@@ -20,14 +20,16 @@ class SimulateTableViewController: UITableViewController, SimulateControllerProt
     }
     
     func addAction(atIndex: Int, value: String) {
-        buttonsArray.insert( value, at: atIndex)
+        buttonsArray.insert(value, at: atIndex)
         tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
+        tableView.reloadData()
     }
     
     func deleteAction(atIndex: Int) {
         guard buttonsArray.indices.contains(atIndex) else { return }
         buttonsArray.remove(at: atIndex)
         tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,14 +42,14 @@ class SimulateTableViewController: UITableViewController, SimulateControllerProt
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return buttonsArray.count
+ 
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SimulateVisualCell", for: indexPath) as? SimulateVisualCell
-            else { return UITableViewCell() }
-       
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SimulateVisualCell", for: indexPath)
+            as? SimulateVisualCell else { return UITableViewCell() }
         cell.configureWith(data: buttonsArray[indexPath.row])
-
+        
         return cell
     }
     

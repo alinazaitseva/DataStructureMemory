@@ -1,19 +1,20 @@
 //
-//  ControlManagerFactory.swift
+//  ManagerController.swift
 //  DataStructureMemories
 //
-//  Created by Alina Zaitseva on 4/30/18.
+//  Created by Alina Zaitseva on 4/27/18.
 //  Copyright © 2018 Alina Zaitseva. All rights reserved.
 //
 
 import Foundation
 
-class ControlManagerFactory: ControlManagerFactoryProtocol {
+class ManagerContoller: ControlManagerFactoryProtocol {
+    
     func getManagerController(type: ATDTypes) -> ControlManagerProtocol {
         switch type {
         case .stack:
             return StackTypeStructure()
-            case .queue:
+        case .queue:
             return QueneTypeStructure()
         case .set:
             return SetTypeStructure()
@@ -30,3 +31,4 @@ class ControlManagerFactory: ControlManagerFactoryProtocol {
         }
     }
 }
+

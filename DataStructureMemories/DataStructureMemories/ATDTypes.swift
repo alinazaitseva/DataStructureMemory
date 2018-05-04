@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum ATDTypes {
-    case stack
-    case queue
-    case set
-    case dequeue
-    case priorityQueue
-    case list
-    case multiSet
-    case dictionary
+enum ATDTypes: String {
+    case stack,
+    queue,
+    set,
+    dequeue,
+    priorityqueue,
+    list,
+    multiset,
+    dictionary
 }

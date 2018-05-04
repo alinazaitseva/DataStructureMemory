@@ -9,7 +9,9 @@
 import Foundation
 
 class StackTypeStructure: ControlManagerProtocol {
-    var delegateSimulateController: SimulateControllerProtocol?
+  
+    weak var delegateSimulateController: SimulateControllerProtocol?
+    let usingModel = SimulateModelCell()
     
     var buttonsMenu: [TypesOfButtons] {
         var buttonsArray: Array<TypesOfButtons> = []
@@ -18,12 +20,8 @@ class StackTypeStructure: ControlManagerProtocol {
         return buttonsArray
     }
     
-    weak var delegateSimulateData: SimulateControllerProtocol?
-    let usingModel = SimulateModelCell()
-    
     private func add() {
-        print("1")
-        guard let simulateData = delegateSimulateData else { return }
+        guard let simulateData = delegateSimulateController else { return }
         
         let index = 0
         
@@ -39,10 +37,8 @@ class StackTypeStructure: ControlManagerProtocol {
     }
     
     private func delete() {
-        guard let simulateData = delegateSimulateData else { return }
+        guard let simulateData = delegateSimulateController else { return }
         usingModel.delete(atIndex: 0)
         simulateData.deleteAction(atIndex: 0)
     }
-    
 }
-

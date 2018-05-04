@@ -16,17 +16,17 @@ class VisualizationViewController: UIViewController {
     public var controlManager: ControlManagerProtocol?
     let adapter: AdaptationProtocol = AdaptationController()
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-            if segue.identifier == "showSimulate", let simulateDataController = segue.destination as? SimulateTableViewController {
-                simulateData = simulateDataController
-            }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let simulateData = simulateData else { return }
-        controlManager?.delegateSimulateController = simulateData 
+        controlManager?.delegateSimulateController = simulateData
         adapter.createButtonsMenu(with: controlManager!, view: stackView)
     
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showSimulate", let simulateDataController = segue.destination as? SimulateTableViewController {
+            simulateData = simulateDataController
+        }
     }
 }

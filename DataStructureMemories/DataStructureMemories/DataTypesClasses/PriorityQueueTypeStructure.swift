@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class PriorityQueueTypeStructure: ControlManagerProtocol {
+    
+    var delegateSimulateController: SimulateControllerProtocol?
+    
+    var buttonsMenu: [TypesOfButtons] = []
+    
+
+}

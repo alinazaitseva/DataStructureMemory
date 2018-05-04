@@ -17,6 +17,9 @@ class AdaptationController: AdaptationProtocol {
             switch value {
             case .button(let titleButton, let actionButton):
                 view.addArrangedSubview(ActionButton(title: titleButton, action: actionButton))
+            case .textField(let placeholder, let keyboardType, let action):
+                let textField = TextField(placeholder: placeholder, keyboardType: keyboardType, action: action)
+                view.addArrangedSubview(textField)
             }
         }
     }

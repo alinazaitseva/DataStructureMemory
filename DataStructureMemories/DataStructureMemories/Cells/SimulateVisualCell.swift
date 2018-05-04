@@ -14,12 +14,12 @@ class SimulateVisualCell: UITableViewCell {
     let identifier = "SimulateVisualCell"
 
     func setUpUIColor(color: UIColor) {
-        UIView.animate(withDuration: 1.3, animations: { self.backgroundColor = color })
+        UIView.animate(withDuration: 1.3, animations: { self.backgroundColor = UIColor.red })
     }
 }
-
 extension SimulateVisualCell: SimulateCellProtocol {
     func configureWith(data: String) {
         self.simulateLabel.text  = data
+        self.simulateLabel.textAlignment = .center
     }
 }

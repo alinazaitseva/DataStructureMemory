@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class MultiSetTypeStructure: ControlManagerProtocol {
+    
+    var delegateSimulateController: SimulateControllerProtocol?
+    
+    var buttonsMenu: [TypesOfButtons] = []
+    
+}

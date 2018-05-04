@@ -14,7 +14,7 @@ class ActionButton: UIButton {
     init(title: String, action: ( ()->() )? = nil) {
        super.init(frame: .zero)
         self.setTitle(title, for: .normal)
-        self.setTitleColor(.yellow, for: .normal)
+        self.setTitleColor(.blue, for: .normal)
         self.action = action
         self.setupTarget()
     }
