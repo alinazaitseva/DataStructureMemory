@@ -9,7 +9,7 @@
 import Foundation
 
 class ControlManagerFactory: ControlManagerFactoryProtocol {
-    func getManagerController(type: ATDTypes) -> ControlManagerProtocol {
+    func getManagerController(type: ATDType) -> ControlManagerProtocol {
         switch type {
         case .stack:
             return StackTypeStructure()

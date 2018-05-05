@@ -19,16 +19,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var buttonToggle: UIButton!
     @IBOutlet weak var buttonWiki: UIButton!
     
-    public var srtuctureCell: DataStructMemory?
-    public var factoryEntity = ControlManagerFactory()
+    public var dataCell: DataStructureProtocol!
+    private let factoryEntity = ControlManagerFactory()
     
     var isShowingText = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = srtuctureCell?.titleOfString() ?? "There is no such title"
-        self.descriptionValue.text = srtuctureCell?.descrOfString() ?? "There is no such description"
-        gradientView.opacityGradient()
+        self.title = dataCell?.titleOfString ?? "There is no such title"
+        self.descriptionValue.text = dataCell?.descriptionOfString ?? "There is no such description"
+        gradientView.addOpacityGradient()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,7 +58,7 @@ class DetailViewController: UIViewController {
     func giveWayToWKWebViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let navigationWKController = mainStoryboard.instantiateViewController(withIdentifier: "showWK") as? WKWebNavigationViewController else { return }
-        navigationWKController.exactURL = srtuctureCell?.getWikiLink()
+        navigationWKController.exactURL = dataCell?.getWikiLink
         self.present(navigationWKController, animated: true)
     }
     func giveWayToUIWebViewController() {
@@ -66,14 +66,14 @@ class DetailViewController: UIViewController {
 
         guard let uiWebController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController else { return }
             
-        uiWebController.exactURL = srtuctureCell?.getWikiLink()
+        uiWebController.exactURL = dataCell?.getWikiLink
         self.present(uiWebController, animated: true)
     }
     func giveWayToSFSafaryViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let sfSafaryViewController = mainStoryboard.instantiateViewController(withIdentifier: "SFSafaryViewController") as? SFSafaryViewController
             else { return }
-        sfSafaryViewController.exactURL = srtuctureCell?.getWikiLink()
+        sfSafaryViewController.exactURL = dataCell?.getWikiLink
         self.present(sfSafaryViewController, animated: true)
     }
     
@@ -113,15 +113,15 @@ class DetailViewController: UIViewController {
     @IBAction func buttonVisualize(_ sender: UIButton) {
         let mainStoryboard = UIStoryboard( name: "Main", bundle: nil )
         guard let visualizeViewController = mainStoryboard.instantiateViewController(withIdentifier: "VisualizationViewController") as? VisualizationViewController else { return }
-        guard let title = srtuctureCell?.titleOfString().lowercased(),
-            let type = ATDTypes(rawValue: title) else { return }
+        guard let title = dataCell?.titleOfString.lowercased(),
+            let type = ATDType(rawValue: title) else { return }
         visualizeViewController.controlManager = factoryEntity.getManagerController(type: type)
         self.navigationController?.pushViewController(visualizeViewController, animated: true)
     }
 }
 
 extension UIView {
-    func opacityGradient() {
+    func addOpacityGradient() {
         let gradient = CAGradientLayer()
         gradient.frame = self.bounds
         gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]

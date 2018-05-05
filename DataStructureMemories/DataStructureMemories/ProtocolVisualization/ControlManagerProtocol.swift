@@ -10,5 +10,5 @@ import Foundation
 
 protocol ControlManagerProtocol {
     var delegateSimulateController: SimulateControllerProtocol? { get set }
-    var buttonsMenu: [TypesOfButtons] { get }
+    var buttonsMenu: [TypeOfButtons] { get }
 }

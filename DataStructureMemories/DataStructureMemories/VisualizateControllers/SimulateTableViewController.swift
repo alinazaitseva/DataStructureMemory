@@ -19,16 +19,16 @@ class SimulateTableViewController: UITableViewController, SimulateControllerProt
         super.viewDidLoad()
     }
     
-    func addAction(atIndex: Int, value: String) {
-        buttonsArray.insert(value, at: atIndex)
-        tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
+    func addAction(at: Int, value: String) {
+        buttonsArray.insert(value, at: at)
+        tableView.insertRows(at: [IndexPath(row: at, section: 0)], with: .bottom)
         tableView.reloadData()
     }
     
-    func deleteAction(atIndex: Int) {
-        guard buttonsArray.indices.contains(atIndex) else { return }
-        buttonsArray.remove(at: atIndex)
-        tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .bottom)
+    func deleteAction(at : Int) {
+        guard buttonsArray.indices.contains(at ) else { return }
+        buttonsArray.remove(at: at )
+        tableView.deleteRows(at: [IndexPath(row: at , section: 0)], with: .bottom)
     
     }
     

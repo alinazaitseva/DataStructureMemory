@@ -12,8 +12,8 @@ class DataStructureCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
-extension DataStructureCell: ConfigurableCell {
+extension DataStructureCell: ConfigurableCellProtocol {
     func configure(with model: DataStructEntity) {
-        titleLabel.text = model.titleOfString()
+        titleLabel.text = model.titleOfString
     }
 }

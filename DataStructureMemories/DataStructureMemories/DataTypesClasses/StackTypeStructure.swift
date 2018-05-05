@@ -13,10 +13,10 @@ class StackTypeStructure: ControlManagerProtocol {
     weak var delegateSimulateController: SimulateControllerProtocol?
     let usingModel = SimulateModelCell()
     
-    var buttonsMenu: [TypesOfButtons] {
-        var buttonsArray: Array<TypesOfButtons> = []
-        buttonsArray.append(TypesOfButtons.button(title: "PUSH", action: add ))
-        buttonsArray.append(TypesOfButtons.button(title: "POP", action: delete ))
+    var buttonsMenu: [TypeOfButtons] {
+        var buttonsArray: Array<TypeOfButtons> = []
+        buttonsArray.append(TypeOfButtons.button(title: "PUSH", action: add ))
+        buttonsArray.append(TypeOfButtons.button(title: "POP", action: delete ))
         return buttonsArray
     }
     
@@ -25,20 +25,20 @@ class StackTypeStructure: ControlManagerProtocol {
         
         let index = 0
         
-        guard let elementInStack = usingModel.getElement(atIndex: index) else {
+        guard let elementInStack = usingModel.getElement(at: index) else {
             let newElementInStack = CellConditionEntity(value: 0)
-            usingModel.add(atIndex: index, element: newElementInStack)
-            simulateData.addAction(atIndex: index, value: newElementInStack.convertToString())
+            usingModel.add(element: newElementInStack, at: index)
+            simulateData.addAction(at: index, value: newElementInStack.convertToString())
             return
         }
        let newElement = CellConditionEntity(value: elementInStack.value+1)
-        usingModel.add(atIndex: index, element: newElement)
-        simulateData.addAction(atIndex: index, value: newElement.convertToString())
+        usingModel.add(element: newElement, at: index)
+        simulateData.addAction(at: index, value: newElement.convertToString())
     }
     
     private func delete() {
         guard let simulateData = delegateSimulateController else { return }
-        usingModel.delete(atIndex: 0)
-        simulateData.deleteAction(atIndex: 0)
+        usingModel.deleteElement(at: 0)
+        simulateData.deleteAction(at : 0)
     }
 }

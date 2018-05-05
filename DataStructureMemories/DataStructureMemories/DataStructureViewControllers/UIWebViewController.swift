@@ -9,11 +9,11 @@
 import UIKit
 
 class UIWebViewController: UIViewController, UIWebViewDelegate {
-    var exactURL: String?
+    var exactURL: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let urlRequest: URLRequest = URLRequest(url: URL(string: exactURL!)!)
+        let urlRequest: URLRequest = URLRequest(url: URL(string: exactURL)!)
         UIWebView.loadRequest(urlRequest)
     }
 

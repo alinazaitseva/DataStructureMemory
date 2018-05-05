@@ -22,7 +22,7 @@ struct CellConditionEntity {
     }
     
     func convertToString() -> String {
-        var result = String()
+        var result = ""
         if descriptionValue == "" {
             result += String( self.value )
         } else {
@@ -31,7 +31,7 @@ struct CellConditionEntity {
         if self.extraValue != "" {
             result += ", " + self.descriptionValue + ": " + String(self.extraValue)
                     }
-         return result  
+         return result
     }
 }
 

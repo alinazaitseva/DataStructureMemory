@@ -11,7 +11,7 @@ import WebKit
 
 class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     var webView: WKWebView!
-    var exactURL: String?
+    var exactURL: String!
 
     override func loadView() {
         webView = WKWebView()
@@ -24,7 +24,7 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate 
         let navigationWKWeb = navigationController as! WKWebNavigationViewController
         exactURL = navigationWKWeb.exactURL
         webView.allowsBackForwardNavigationGestures = true
-        webView.load(URLRequest(url: URL(string: exactURL!)!))
+        webView.load(URLRequest(url: URL(string: exactURL)!))
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,7 +12,7 @@ import UIKit
 class AdaptationController: AdaptationProtocol {
     
     func createButtonsMenu(with: ControlManagerProtocol, view: UIStackView) {
-        let buttonArray: [TypesOfButtons] = with.buttonsMenu
+        let buttonArray: [TypeOfButtons] = with.buttonsMenu
         buttonArray.forEach {value in
             switch value {
             case .button(let titleButton, let actionButton):

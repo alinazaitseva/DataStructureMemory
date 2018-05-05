@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SimulateControllerProtocol: class {
-    func addAction(atIndex: Int, value: String)
-    func deleteAction(atIndex: Int)
+    func addAction(at: Int, value: String)
+    func deleteAction(at : Int)
 
 }

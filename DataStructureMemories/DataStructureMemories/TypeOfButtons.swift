@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-enum TypesOfButtons {
+enum TypeOfButtons {
     case button(title: String, action: ()->() )
-//    case textField(placeholder: String, action( (Srting)->() )? )
+    case textField(placeholder: String, keyboardType: UIKeyboardType, action:( (String)->() )?)
 }

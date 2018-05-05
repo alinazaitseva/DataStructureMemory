@@ -19,22 +19,23 @@
 		CE19CA0E2091B5AC00AAC17C /* VisualizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA0D2091B5AC00AAC17C /* VisualizationViewController.swift */; };
 		CE19CA102091B63400AAC17C /* SimulateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA0F2091B63400AAC17C /* SimulateTableViewController.swift */; };
 		CE19CA172091D58A00AAC17C /* ControlManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19CA162091D58A00AAC17C /* ControlManagerProtocol.swift */; };
-		CE1D23D92099AC1000CA1EA1 /* ATDTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D23D82099AC0F00CA1EA1 /* ATDTypes.swift */; };
+		CE1D23D92099AC1000CA1EA1 /* ATDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D23D82099AC0F00CA1EA1 /* ATDType.swift */; };
 		CE1D23DB2099D62700CA1EA1 /* CellConditionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D23DA2099D62700CA1EA1 /* CellConditionEntity.swift */; };
 		CE1D23DF2099D86800CA1EA1 /* SimulateModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D23DE2099D86800CA1EA1 /* SimulateModelCell.swift */; };
 		CE1D23E32099E35500CA1EA1 /* ReuseIndentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D23E22099E35500CA1EA1 /* ReuseIndentifierProtocol.swift */; };
+		CE1E310D209CAEDF008BDD18 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E310C209CAEDE008BDD18 /* File.swift */; };
 		CE31124220934F440021B2C6 /* ManagerControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31124120934F440021B2C6 /* ManagerControllers.swift */; };
-		CE53572C2086014A003D98AF /* DataStructMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53572B2086014A003D98AF /* DataStructMemory.swift */; };
-		CE65A6F42080B702003FB1E7 /* DataStructMemorySorce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */; };
+		CE53572C2086014A003D98AF /* DataStructureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53572B2086014A003D98AF /* DataStructureProtocol.swift */; };
+		CE65A6F42080B702003FB1E7 /* DataStructureSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F32080B702003FB1E7 /* DataStructureSourceProtocol.swift */; };
 		CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */; };
-		CE674F652084C9B800E18E5E /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE674F642084C9B800E18E5E /* ConfigurableCell.swift */; };
+		CE674F652084C9B800E18E5E /* ConfigurableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE674F642084C9B800E18E5E /* ConfigurableCellProtocol.swift */; };
 		CE674F6B2084CE1000E18E5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE674F6A2084CE1000E18E5E /* DetailViewController.swift */; };
 		CE69BD35208D3A8D00D308CA /* UIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BD34208D3A8D00D308CA /* UIWebViewController.swift */; };
 		CE69BD37208D3AA900D308CA /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BD36208D3AA900D308CA /* WKWebViewController.swift */; };
 		CE69BD39208D3AF500D308CA /* SFSafaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69BD38208D3AF500D308CA /* SFSafaryViewController.swift */; };
 		CE79123720966A0800B6F0E7 /* SimulateVisualCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123620966A0800B6F0E7 /* SimulateVisualCell.swift */; };
 		CE791239209674B600B6F0E7 /* SimulateCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE791238209674B600B6F0E7 /* SimulateCellProtocol.swift */; };
-		CE79123B2096863700B6F0E7 /* TypesOfButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */; };
+		CE79123B2096863700B6F0E7 /* TypeOfButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123A2096863700B6F0E7 /* TypeOfButtons.swift */; };
 		CE79123D209687E700B6F0E7 /* ControlManagerFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123C209687E700B6F0E7 /* ControlManagerFactoryProtocol.swift */; };
 		CE79123F209689D100B6F0E7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79123E209689D100B6F0E7 /* ActionButton.swift */; };
 		CE79124120968EDE00B6F0E7 /* AdaptationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79124020968EDE00B6F0E7 /* AdaptationController.swift */; };
@@ -69,22 +70,23 @@
 		CE19CA0D2091B5AC00AAC17C /* VisualizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewController.swift; sourceTree = "<group>"; };
 		CE19CA0F2091B63400AAC17C /* SimulateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateTableViewController.swift; sourceTree = "<group>"; };
 		CE19CA162091D58A00AAC17C /* ControlManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManagerProtocol.swift; sourceTree = "<group>"; };
-		CE1D23D82099AC0F00CA1EA1 /* ATDTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDTypes.swift; sourceTree = "<group>"; };
+		CE1D23D82099AC0F00CA1EA1 /* ATDType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDType.swift; sourceTree = "<group>"; };
 		CE1D23DA2099D62700CA1EA1 /* CellConditionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConditionEntity.swift; sourceTree = "<group>"; };
 		CE1D23DE2099D86800CA1EA1 /* SimulateModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateModelCell.swift; sourceTree = "<group>"; };
 		CE1D23E22099E35500CA1EA1 /* ReuseIndentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIndentifierProtocol.swift; sourceTree = "<group>"; };
+		CE1E310C209CAEDE008BDD18 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = ../../../../../.Trash/File.swift; sourceTree = "<group>"; };
 		CE31124120934F440021B2C6 /* ManagerControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerControllers.swift; sourceTree = "<group>"; };
-		CE53572B2086014A003D98AF /* DataStructMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemory.swift; sourceTree = "<group>"; };
-		CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemorySorce.swift; sourceTree = "<group>"; };
+		CE53572B2086014A003D98AF /* DataStructureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureProtocol.swift; sourceTree = "<group>"; };
+		CE65A6F32080B702003FB1E7 /* DataStructureSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureSourceProtocol.swift; sourceTree = "<group>"; };
 		CE65A6F52080B788003FB1E7 /* DataStructMemoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructMemoryList.swift; sourceTree = "<group>"; };
-		CE674F642084C9B800E18E5E /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfigurableCell.swift; path = ../../../../../ConfigurableCell.swift; sourceTree = "<group>"; };
+		CE674F642084C9B800E18E5E /* ConfigurableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfigurableCellProtocol.swift; path = ../../../../../ConfigurableCellProtocol.swift; sourceTree = "<group>"; };
 		CE674F6A2084CE1000E18E5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CE69BD34208D3A8D00D308CA /* UIWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebViewController.swift; sourceTree = "<group>"; };
 		CE69BD36208D3AA900D308CA /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		CE69BD38208D3AF500D308CA /* SFSafaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafaryViewController.swift; sourceTree = "<group>"; };
 		CE79123620966A0800B6F0E7 /* SimulateVisualCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateVisualCell.swift; sourceTree = "<group>"; };
 		CE791238209674B600B6F0E7 /* SimulateCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateCellProtocol.swift; sourceTree = "<group>"; };
-		CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesOfButtons.swift; sourceTree = "<group>"; };
+		CE79123A2096863700B6F0E7 /* TypeOfButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfButtons.swift; sourceTree = "<group>"; };
 		CE79123C209687E700B6F0E7 /* ControlManagerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManagerFactoryProtocol.swift; sourceTree = "<group>"; };
 		CE79123E209689D100B6F0E7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		CE79124020968EDE00B6F0E7 /* AdaptationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationController.swift; sourceTree = "<group>"; };
@@ -142,9 +144,9 @@
 				CEC988042095286700984798 /* DataTypesClasses */,
 				CE19CA112091D33000AAC17C /* VisualizateControllers */,
 				CE0DE1B3207F77AD0031F233 /* Main.storyboard */,
-				CE79123A2096863700B6F0E7 /* TypesOfButtons.swift */,
+				CE79123A2096863700B6F0E7 /* TypeOfButtons.swift */,
 				CE79123E209689D100B6F0E7 /* ActionButton.swift */,
-				CE1D23D82099AC0F00CA1EA1 /* ATDTypes.swift */,
+				CE1D23D82099AC0F00CA1EA1 /* ATDType.swift */,
 				CE1D23DA2099D62700CA1EA1 /* CellConditionEntity.swift */,
 				CE18D73F209B5C7C009AB628 /* Property List.plist */,
 				CE0DE1BB207F77AD0031F233 /* Info.plist */,
@@ -159,6 +161,7 @@
 		CE18D738209B23D2009AB628 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				CE1E310C209CAEDE008BDD18 /* File.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -196,9 +199,9 @@
 		CE65A6F92080BC7A003FB1E7 /* ProtocolDataStructure */ = {
 			isa = PBXGroup;
 			children = (
-				CE65A6F32080B702003FB1E7 /* DataStructMemorySorce.swift */,
-				CE674F642084C9B800E18E5E /* ConfigurableCell.swift */,
-				CE53572B2086014A003D98AF /* DataStructMemory.swift */,
+				CE65A6F32080B702003FB1E7 /* DataStructureSourceProtocol.swift */,
+				CE674F642084C9B800E18E5E /* ConfigurableCellProtocol.swift */,
+				CE53572B2086014A003D98AF /* DataStructureProtocol.swift */,
 			);
 			path = ProtocolDataStructure;
 			sourceTree = "<group>";
@@ -342,12 +345,13 @@
 				CE65A6F62080B788003FB1E7 /* DataStructMemoryList.swift in Sources */,
 				CE69BD35208D3A8D00D308CA /* UIWebViewController.swift in Sources */,
 				CE19CA172091D58A00AAC17C /* ControlManagerProtocol.swift in Sources */,
-				CE53572C2086014A003D98AF /* DataStructMemory.swift in Sources */,
+				CE53572C2086014A003D98AF /* DataStructureProtocol.swift in Sources */,
 				CE1D23DF2099D86800CA1EA1 /* SimulateModelCell.swift in Sources */,
 				CEC9880820952E5E00984798 /* QueneTypeStructure.swift in Sources */,
 				CE79123F209689D100B6F0E7 /* ActionButton.swift in Sources */,
 				CEC9880620952E3B00984798 /* SetTypeStructure.swift in Sources */,
-				CE79123B2096863700B6F0E7 /* TypesOfButtons.swift in Sources */,
+				CE79123B2096863700B6F0E7 /* TypeOfButtons.swift in Sources */,
+				CE1E310D209CAEDF008BDD18 /* File.swift in Sources */,
 				CEDAE05320976EBE001DA9EB /* ControlManagerFactory.swift in Sources */,
 				CEC9881420952FE100984798 /* DictionaryTypeStructure.swift in Sources */,
 				CE79123720966A0800B6F0E7 /* SimulateVisualCell.swift in Sources */,
@@ -363,12 +367,12 @@
 				CEC988192095324500984798 /* AdaptationProtocol.swift in Sources */,
 				CECDDECD207FAB830072B383 /* DataStructureCell.swift in Sources */,
 				CE0E2CAE208E4E8800579AAC /* WKWebNavigationViewController.swift in Sources */,
-				CE1D23D92099AC1000CA1EA1 /* ATDTypes.swift in Sources */,
-				CE674F652084C9B800E18E5E /* ConfigurableCell.swift in Sources */,
+				CE1D23D92099AC1000CA1EA1 /* ATDType.swift in Sources */,
+				CE674F652084C9B800E18E5E /* ConfigurableCellProtocol.swift in Sources */,
 				CE0E2CAC208E4E1900579AAC /* UIWebNavigationViewController.swift in Sources */,
 				CEC9880C20952F0C00984798 /* DequeueTypeStructure.swift in Sources */,
 				CEC9881020952FAB00984798 /* ListTypeStructure.swift in Sources */,
-				CE65A6F42080B702003FB1E7 /* DataStructMemorySorce.swift in Sources */,
+				CE65A6F42080B702003FB1E7 /* DataStructureSourceProtocol.swift in Sources */,
 				CE1D23DB2099D62700CA1EA1 /* CellConditionEntity.swift in Sources */,
 				CE18D73E209B5203009AB628 /* TextField.swift in Sources */,
 				CECDDECB207F8EFB0072B383 /* DataStructureTableViewController.swift in Sources */,

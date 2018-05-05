@@ -12,22 +12,19 @@ class SimulateModelCell {
     private var data: [CellConditionEntity] = []
     
         var count: Int {
-            get {
                 return data.count
-            }
         }
-        func add(atIndex: Int, element: CellConditionEntity) {
-            data.insert(element, at: atIndex)
+    func add(element: CellConditionEntity, at index: Int ) {
+            data.insert(element, at: index)
         }
     
-        func delete(atIndex: Int) {
-            if !data.indices.contains(atIndex) {return}
-            
-            data.remove(at: atIndex)
+        func deleteElement(at index: Int ) {
+            if !data.indices.contains(index) {return}
+            data.remove(at: index)
         }
-        func getElement(atIndex: Int) -> CellConditionEntity? {
-            if data.indices.contains(atIndex) {
-                return data[atIndex]
+    func getElement(at index: Int) -> CellConditionEntity? {
+            if data.indices.contains(index) {
+                return data[index]
             } else {
                 return nil
             }

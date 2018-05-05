@@ -12,6 +12,6 @@ class MultiSetTypeStructure: ControlManagerProtocol {
     
     var delegateSimulateController: SimulateControllerProtocol?
     
-    var buttonsMenu: [TypesOfButtons] = []
+    var buttonsMenu: [TypeOfButtons] = []
     
 }

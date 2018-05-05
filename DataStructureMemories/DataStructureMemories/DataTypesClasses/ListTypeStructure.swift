@@ -14,11 +14,11 @@ class ListTypeStructure: ControlManagerProtocol {
     private var valueInTextField = ""
     let usingModel = SimulateModelCell()
     
-    var buttonsMenu: [TypesOfButtons] {
-        var buttonsArray: Array<TypesOfButtons> = []
-        buttonsArray.append(TypesOfButtons.button(title: "PUSH", action: add ))
-        buttonsArray.append(TypesOfButtons.button(title: "POP", action: delete ))
-        buttonsArray.append(TypesOfButtons.textField(placeholder: "index", keyboardType: .numberPad, action: valueInTextField))
+    var buttonsMenu: [TypeOfButtons] {
+        var buttonsArray: Array<TypeOfButtons> = []
+        buttonsArray.append(TypeOfButtons.button(title: "PUSH", action: add ))
+        buttonsArray.append(TypeOfButtons.button(title: "POP", action: delete ))
+        buttonsArray.append(TypeOfButtons.textField(placeholder: "index", keyboardType: .numberPad, action: valueInTextField))
         return buttonsArray
     }
     
@@ -27,8 +27,8 @@ class ListTypeStructure: ControlManagerProtocol {
             else { return }
         if index >= 0 && index <= usingModel.count {
             let listElement = CellConditionEntity(value: usingModel.count)
-            usingModel.add(atIndex: index, element: listElement)
-            simulateData.addAction(atIndex: index, value: listElement.convertToString())
+            usingModel.add(element: listElement, at: index)
+            simulateData.addAction(at: index, value: listElement.convertToString())
         }
     }
     
@@ -36,8 +36,8 @@ class ListTypeStructure: ControlManagerProtocol {
         guard let simulateData = delegateSimulateController, let index = Int(valueInTextField)
             else { return }
         if index >= 0 && index <= usingModel.count {
-            usingModel.delete(atIndex: index)
-            simulateData.deleteAction(atIndex: index)
+            usingModel.deleteElement(at: index)
+            simulateData.deleteAction(at : index)
         }
     }
     

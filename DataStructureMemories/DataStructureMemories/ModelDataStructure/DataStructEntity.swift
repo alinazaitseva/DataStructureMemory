@@ -8,22 +8,27 @@
 
 import Foundation
 
-class DataStructEntity: DataStructMemory {
+class DataStructEntity: DataStructureProtocol {
    
+    var titleOfString: String {
+        get {
+            return title.self
+        }
+    }
+    var descriptionOfString: String {
+        get {
+            return description.self
+        }
+    }
+    var getWikiLink: String {
+        get {
+            return link.self
+        }
+    }
+    
     private let title: String
     private let description: String
     private let link: String
-    
-    func titleOfString() -> String {
-        return title.self
-    }
-    
-    func descrOfString() -> String {
-        return description.self
-    }
-    func getWikiLink() -> String {
-        return link.self
-    }
     
     init(title: String, description: String, link: String) {
         self.title = title
