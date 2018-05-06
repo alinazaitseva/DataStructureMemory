@@ -50,13 +50,6 @@ class DetailViewController: UIViewController {
         self.isShowingText = !self.isShowingText
     }
 
-    func giveWayToWKWebViewController() {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let navigationWKController = mainStoryboard.instantiateViewController(withIdentifier: "showWK") as? WKWebNavigationViewController else { return }
-        navigationWKController.exactURL = dataCell?.getWikiLink
-        self.present(navigationWKController, animated: true)
-    }
-    
 //    func giveWayToUIWebViewController() {
 //        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //
@@ -66,13 +59,20 @@ class DetailViewController: UIViewController {
 //        self.present(uiWebController, animated: true)
 //    }
     
-    func giveWayToSFSafaryViewController() {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let sfSafaryViewController = mainStoryboard.instantiateViewController(withIdentifier: "SFSafaryViewController") as? SFSafaryViewController
-            else { return }
-        sfSafaryViewController.exactURL = dataCell?.getWikiLink
-        self.present(sfSafaryViewController, animated: true)
-    }
+//    func giveWayToWKWebViewController() {
+//        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        guard let navigationWKController = mainStoryboard.instantiateViewController(withIdentifier: "showWK") as? WKWebNavigationViewController else { return }
+//        navigationWKController.exactURL = dataCell?.getWikiLink
+//        self.present(navigationWKController, animated: true)
+//    }
+    
+//    func giveWayToSFSafaryViewController() {
+//        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        guard let sfSafaryViewController = mainStoryboard.instantiateViewController(withIdentifier: "SFSafaryViewController") as? SFSafaryViewController
+//            else { return }
+//        sfSafaryViewController.exactURL = dataCell?.getWikiLink
+//        self.present(sfSafaryViewController, animated: true)
+//    }
     
     @IBAction func pathToLinksToWiki(_ sender: Any) {
     
@@ -90,30 +90,33 @@ class DetailViewController: UIViewController {
             
             uiWebController?.exactURL = self.dataCell?.getWikiLink
             self.present(uiWebController!, animated: true)
-//            return
         }
-        let uiWebViewAction = UIAlertAction(title: "UIWebViewAction", style: .default, handler: giveWayToUIWebViewController) {
-            _ in
-            print("webUIView")
+        let uiWebViewAction = UIAlertAction(title: "UIWebViewAction", style: .default) { (giveWayToUIWebViewController) in
+             print("webUIView")
         }
         actionSheetController.addAction(uiWebViewAction)
         
-        
-        
-        let webKitView = UIAlertAction(title: "WebViewAction", style: .default) {
-            _ in
-            self.giveWayToWKWebViewController()
-            print("webKitView")
+        var giveWayToWKWebViewController: ((UIAlertAction) -> Void) {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let navigationWKController = mainStoryboard.instantiateViewController(withIdentifier: "showWK") as? WKWebNavigationViewController
+            navigationWKController?.exactURL = dataCell?.getWikiLink
+            self.present(navigationWKController!, animated: true)
         }
+        let webKitView = UIAlertAction(title: "WebViewAction", style: .default) { (giveWayToWKWebViewController) in
+             print("webKitView")
+        }
+        
         actionSheetController.addAction(webKitView)
         
+        var giveWayToSFSafaryViewController: ((UIAlertAction) -> Void) {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+           let sfSafaryViewController = mainStoryboard.instantiateViewController(withIdentifier: "SFSafaryViewController") as? SFSafaryViewController
+            sfSafaryViewController?.exactURL = dataCell?.getWikiLink
+            self.present(sfSafaryViewController!, animated: true)
+        }
         
-        
-        
-        let sfSafary = UIAlertAction(title: "SfSafaryAction", style: .default) {
-            _ in
-             self.giveWayToSFSafaryViewController()
-            print("sfSafary")
+        let sfSafary = UIAlertAction(title: "SfSafaryAction", style: .default) { (giveWayToSFSafaryViewController) in
+             print("sfSafary")
         }
         actionSheetController.addAction(sfSafary)
 
