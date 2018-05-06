@@ -14,6 +14,7 @@ class DictionaryTypeStructure: ControlManagerProtocol {
     private var value = ""
     private var key = ""
     let usingModel = SimulateModelCell()
+    private let initialIndex = 0
     
     var buttonsMenu: [TypeOfButtons] {
         var buttonsArray: Array<TypeOfButtons> = []
@@ -29,8 +30,8 @@ class DictionaryTypeStructure: ControlManagerProtocol {
         let dictionaryElement = CellConditionEntity(value: value, descriptionValue: "value", extraValue: key, inputedValue: "key")
        
         if usingModel.count == 0 {
-            usingModel.add(element: dictionaryElement, at: 0)
-            simulatedata.addAction(at: 0, value: dictionaryElement.convertToString())
+            usingModel.add(element: dictionaryElement, at: initialIndex)
+            simulatedata.addAction(at: initialIndex, value: dictionaryElement.convertToString())
             return
         }
         
@@ -41,7 +42,7 @@ class DictionaryTypeStructure: ControlManagerProtocol {
             simulatedata.addAction(at: index, value: dictionaryElement.convertToString())
             return
         }
-        guard let firstElement = usingModel.getElement(at: 0) else { return }
+        guard let firstElement = usingModel.getElement(at: initialIndex) else { return }
         
         if firstElement.extraValue > key {
             let index = 0
@@ -60,7 +61,6 @@ class DictionaryTypeStructure: ControlManagerProtocol {
             }
         }
     }
-    
     private func delete() {
         guard let simulatedata = delegateSimulateController else { return }
         

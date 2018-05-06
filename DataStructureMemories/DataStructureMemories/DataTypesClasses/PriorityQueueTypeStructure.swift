@@ -13,7 +13,4 @@ class PriorityQueueTypeStructure: ControlManagerProtocol {
     var delegateSimulateController: SimulateControllerProtocol?
     let usingModel = SimulateModelCell()
     var buttonsMenu: [TypeOfButtons] = []
-    
-    
-
 }

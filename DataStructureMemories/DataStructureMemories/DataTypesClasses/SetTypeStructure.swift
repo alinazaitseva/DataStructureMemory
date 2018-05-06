@@ -13,7 +13,7 @@ class SetTypeStructure: ControlManagerProtocol {
     weak var delegateSimulateController: SimulateControllerProtocol?
     let usingModel = SimulateModelCell()
     var valueInTextField = ""
-   
+
     var buttonsMenu: [TypeOfButtons] {
         var buttonsArray: Array<TypeOfButtons> = []
         buttonsArray.append(TypeOfButtons.button(title: "PUSH", action: add ))

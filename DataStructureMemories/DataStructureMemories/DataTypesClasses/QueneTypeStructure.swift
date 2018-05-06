@@ -12,6 +12,7 @@ class QueneTypeStructure: ControlManagerProtocol {
     
     weak var delegateSimulateController: SimulateControllerProtocol?
     let usingModel = SimulateModelCell()
+    private let initialIndex = 0
     
     var buttonsMenu: [TypeOfButtons] {
         var buttonsArray: Array<TypeOfButtons> = []
@@ -37,8 +38,8 @@ class QueneTypeStructure: ControlManagerProtocol {
     
     private func delete() {
         guard let simulateData = delegateSimulateController else { return }
-        usingModel.deleteElement(at: 0)
-        simulateData.deleteAction(at : 0)
+        usingModel.deleteElement(at: initialIndex)
+        simulateData.deleteAction(at : initialIndex)
     }
     
 }

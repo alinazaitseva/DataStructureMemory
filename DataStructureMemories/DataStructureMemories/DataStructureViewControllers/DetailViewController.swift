@@ -21,9 +21,7 @@ class DetailViewController: UIViewController {
     
     public var dataCell: DataStructureProtocol!
     private let factoryEntity = ControlManagerFactory()
-    
-    var isShowingText = false
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = dataCell?.titleOfString ?? "There is no such title"
@@ -33,42 +31,41 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    @IBAction func buttonShowText(_ sender: Any) {
-        let titleMore = "More"
-        let titleLess = "Less"
-        if isShowingText {
-            UIView.transition(with: scrollView, duration: 0.6, options: .transitionCrossDissolve, animations: {
-                self.buttonToggle.setTitle(titleMore, for: UIControlState.normal)
-                self.isShowingText = false
-                self.heightConstraint.priority = UILayoutPriority(rawValue: 999)
-                self.gradientView.isHidden = false
-            })
-        } else {
-            UIView.transition(with: scrollView, duration: 0.6, options: .transitionCrossDissolve, animations: {
-                self.buttonToggle.setTitle(titleLess, for: UIControlState.normal)
-                self.isShowingText = true
-                self.heightConstraint.priority = UILayoutPriority(rawValue: 250)
-                self.gradientView.isHidden = true
-            })
+    //assumed name
+    typealias Presentation = (title: String, priority: Int, isGradientHidden: Bool)
+    var isShowingText = false
+        {
+        didSet{
+            self.updatePresentation()
         }
-        view.layoutIfNeeded()
+    }
+    var presentation: Presentation {
+        return(title: isShowingText ? "Less":"More", priority: isShowingText ? 999:250, isGradientHidden: isShowingText)
+    }
+    private func updatePresentation() {
+        let presentation = self.presentation
     }
     
+    @IBAction func buttonShowText(_ sender: Any) {
+        self.isShowingText = !self.isShowingText
+    }
+
     func giveWayToWKWebViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let navigationWKController = mainStoryboard.instantiateViewController(withIdentifier: "showWK") as? WKWebNavigationViewController else { return }
         navigationWKController.exactURL = dataCell?.getWikiLink
         self.present(navigationWKController, animated: true)
     }
-    func giveWayToUIWebViewController() {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-
-        guard let uiWebController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController else { return }
-            
-        uiWebController.exactURL = dataCell?.getWikiLink
-        self.present(uiWebController, animated: true)
-    }
+    
+//    func giveWayToUIWebViewController() {
+//        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//        guard let uiWebController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController else { return }
+//
+//        uiWebController.exactURL = dataCell?.getWikiLink
+//        self.present(uiWebController, animated: true)
+//    }
+    
     func giveWayToSFSafaryViewController() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let sfSafaryViewController = mainStoryboard.instantiateViewController(withIdentifier: "SFSafaryViewController") as? SFSafaryViewController
@@ -86,12 +83,22 @@ class DetailViewController: UIViewController {
         }
         actionSheetController.addAction(cancelActionButton)
         
-        let uiWebViewAction = UIAlertAction(title: "UIWebViewAction", style: .default) {
+        
+        var giveWayToUIWebViewController: ((UIAlertAction) -> Void) {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let uiWebController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController
+            
+            uiWebController?.exactURL = self.dataCell?.getWikiLink
+            self.present(uiWebController!, animated: true)
+//            return
+        }
+        let uiWebViewAction = UIAlertAction(title: "UIWebViewAction", style: .default, handler: giveWayToUIWebViewController) {
             _ in
-            print("Save")
-            self.giveWayToUIWebViewController()
+            print("webUIView")
         }
         actionSheetController.addAction(uiWebViewAction)
+        
+        
         
         let webKitView = UIAlertAction(title: "WebViewAction", style: .default) {
             _ in
@@ -99,6 +106,9 @@ class DetailViewController: UIViewController {
             print("webKitView")
         }
         actionSheetController.addAction(webKitView)
+        
+        
+        
         
         let sfSafary = UIAlertAction(title: "SfSafaryAction", style: .default) {
             _ in
@@ -109,6 +119,7 @@ class DetailViewController: UIViewController {
 
         self.present(actionSheetController, animated: true, completion: nil)
     }
+    
     
     @IBAction func buttonVisualize(_ sender: UIButton) {
         let mainStoryboard = UIStoryboard( name: "Main", bundle: nil )

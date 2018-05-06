@@ -12,6 +12,8 @@ class DequeueTypestructure: ControlManagerProtocol {
     
     weak var delegateSimulateController: SimulateControllerProtocol?
     let usingModel = SimulateModelCell()
+    private let initialIndex = 0
+    
     var buttonsMenu: [TypeOfButtons] {
         var buttonsArray: Array<TypeOfButtons> = []
         buttonsArray.append(TypeOfButtons.button(title: "addToEnd", action: addToEnd ))
@@ -40,10 +42,10 @@ class DequeueTypestructure: ControlManagerProtocol {
         guard let simulateData = delegateSimulateController else { return }
         let index = 0
         
-        guard let element = usingModel.getElement(at: 0) else {
+        guard let element = usingModel.getElement(at: initialIndex) else {
             let newElement = CellConditionEntity (value: 0)
             usingModel.add(element: newElement, at: index)
-            simulateData.addAction(at: 0, value: newElement.convertToString())
+            simulateData.addAction(at: initialIndex, value: newElement.convertToString())
             return
         }
         let newElement = CellConditionEntity(value: element.value+1)
@@ -53,8 +55,8 @@ class DequeueTypestructure: ControlManagerProtocol {
     
     private func deleteFirst() {
         guard let simulateData = delegateSimulateController else { return }
-        usingModel.deleteElement(at: 0)
-        simulateData.deleteAction(at : 0)
+        usingModel.deleteElement(at: initialIndex)
+        simulateData.deleteAction(at : initialIndex)
     }
     
     private func deleteLast() {
