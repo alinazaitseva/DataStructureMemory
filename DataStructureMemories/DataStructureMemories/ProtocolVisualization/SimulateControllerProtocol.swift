@@ -11,5 +11,4 @@ import Foundation
 protocol SimulateControllerProtocol: class {
     func addAction(at: Int, value: String)
     func deleteAction(at : Int)
-
 }

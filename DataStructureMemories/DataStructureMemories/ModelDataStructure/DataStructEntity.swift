@@ -9,7 +9,6 @@
 import Foundation
 
 class DataStructEntity: DataStructureProtocol {
-   
     var titleOfString: String {
         get {
             return title.self
@@ -25,15 +24,16 @@ class DataStructEntity: DataStructureProtocol {
             return link.self
         }
     }
-    
     private let title: String
     private let description: String
     private let link: String
+//    let type: ATDType
     
     init(title: String, description: String, link: String) {
         self.title = title
         self.description = description
         self.link = link
+//        self.type = type
 
     }
 }

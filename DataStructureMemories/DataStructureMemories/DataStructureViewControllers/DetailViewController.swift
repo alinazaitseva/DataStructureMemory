@@ -21,7 +21,7 @@ class DetailViewController: UIViewController {
     
     public var dataCell: DataStructureProtocol!
     private let factoryEntity = ControlManagerFactory()
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = dataCell?.titleOfString ?? "There is no such title"
@@ -49,31 +49,6 @@ class DetailViewController: UIViewController {
     @IBAction func buttonShowText(_ sender: Any) {
         self.isShowingText = !self.isShowingText
     }
-
-//    func giveWayToUIWebViewController() {
-//        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//
-//        guard let uiWebController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController else { return }
-//
-//        uiWebController.exactURL = dataCell?.getWikiLink
-//        self.present(uiWebController, animated: true)
-//    }
-    
-//    func giveWayToWKWebViewController() {
-//        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let navigationWKController = mainStoryboard.instantiateViewController(withIdentifier: "showWK") as? WKWebNavigationViewController else { return }
-//        navigationWKController.exactURL = dataCell?.getWikiLink
-//        self.present(navigationWKController, animated: true)
-//    }
-    
-//    func giveWayToSFSafaryViewController() {
-//        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let sfSafaryViewController = mainStoryboard.instantiateViewController(withIdentifier: "SFSafaryViewController") as? SFSafaryViewController
-//            else { return }
-//        sfSafaryViewController.exactURL = dataCell?.getWikiLink
-//        self.present(sfSafaryViewController, animated: true)
-//    }
-    
     @IBAction func pathToLinksToWiki(_ sender: Any) {
     
         let actionSheetController: UIAlertController = UIAlertController( title: "Please select", message: "Option to select", preferredStyle: .actionSheet)
@@ -83,13 +58,14 @@ class DetailViewController: UIViewController {
         }
         actionSheetController.addAction(cancelActionButton)
         
-        
         var giveWayToUIWebViewController: ((UIAlertAction) -> Void) {
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let uiWebController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController
-            
-            uiWebController?.exactURL = self.dataCell?.getWikiLink
-            self.present(uiWebController!, animated: true)
+            return { _ in
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let uiWebController = mainStoryboard.instantiateViewController(withIdentifier: "UIWebViewController") as? UIWebViewController
+                
+                uiWebController?.exactURL = self.dataCell?.getWikiLink
+                self.present(uiWebController!, animated: true)
+            }
         }
         let uiWebViewAction = UIAlertAction(title: "UIWebViewAction", style: .default) { (giveWayToUIWebViewController) in
              print("webUIView")
@@ -97,22 +73,25 @@ class DetailViewController: UIViewController {
         actionSheetController.addAction(uiWebViewAction)
         
         var giveWayToWKWebViewController: ((UIAlertAction) -> Void) {
+            return { _ in
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let navigationWKController = mainStoryboard.instantiateViewController(withIdentifier: "showWK") as? WKWebNavigationViewController
-            navigationWKController?.exactURL = dataCell?.getWikiLink
+                navigationWKController?.exactURL = self.dataCell?.getWikiLink
             self.present(navigationWKController!, animated: true)
+            }
         }
         let webKitView = UIAlertAction(title: "WebViewAction", style: .default) { (giveWayToWKWebViewController) in
              print("webKitView")
         }
-        
         actionSheetController.addAction(webKitView)
         
         var giveWayToSFSafaryViewController: ((UIAlertAction) -> Void) {
+            return { _ in
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
            let sfSafaryViewController = mainStoryboard.instantiateViewController(withIdentifier: "SFSafaryViewController") as? SFSafaryViewController
-            sfSafaryViewController?.exactURL = dataCell?.getWikiLink
+            sfSafaryViewController?.exactURL = self.dataCell?.getWikiLink
             self.present(sfSafaryViewController!, animated: true)
+            }
         }
         
         let sfSafary = UIAlertAction(title: "SfSafaryAction", style: .default) { (giveWayToSFSafaryViewController) in
@@ -122,8 +101,7 @@ class DetailViewController: UIViewController {
 
         self.present(actionSheetController, animated: true, completion: nil)
     }
-    
-    
+
     @IBAction func buttonVisualize(_ sender: UIButton) {
         let mainStoryboard = UIStoryboard( name: "Main", bundle: nil )
         guard let visualizeViewController = mainStoryboard.instantiateViewController(withIdentifier: "VisualizationViewController") as? VisualizationViewController else { return }
@@ -133,19 +111,17 @@ class DetailViewController: UIViewController {
         self.navigationController?.pushViewController(visualizeViewController, animated: true)
     }
 }
-
-extension UIView {
-    func addOpacityGradient() {
-        let gradient = CAGradientLayer()
-        gradient.frame = self.bounds
-        gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]
-        gradient.locations = [0.0, 1.0]
-        self.layer.mask = gradient
+    extension UIView {
+        func addOpacityGradient() {
+            let gradient = CAGradientLayer()
+            gradient.frame = self.bounds
+            gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor]
+            gradient.locations = [0.0, 1.0]
+            self.layer.mask = gradient
+        }
     }
-}
-
-extension UIButton {
-    func setTitle(_ title: String) {
-        self.setTitle(title, for: .normal)
+    extension UIButton {
+        func setTitle(_ title: String) {
+            self.setTitle(title, for: .normal)
+        }
     }
-}

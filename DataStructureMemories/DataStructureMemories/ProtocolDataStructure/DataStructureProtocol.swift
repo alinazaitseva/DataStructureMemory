@@ -13,5 +13,5 @@ protocol DataStructureProtocol {
     var titleOfString: String { get }
     var descriptionOfString: String { get }
     var getWikiLink: String { get }
-    
+//    var type: ATDType { get }
 }
