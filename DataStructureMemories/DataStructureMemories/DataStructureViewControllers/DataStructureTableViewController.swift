@@ -11,7 +11,6 @@ import UIKit
 class DataStructureTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let dataStructureManipulatios = DataStructMemoryList()
-    
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,7 +22,6 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
         if let cell = tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath) as? DataStructureCell {
             
             cell.titleLabel.text = dataStructureManipulatios.getValueInDataSource(item: indexPath.row)
-            
             return cell
         } else {
             return tableView.dequeueReusableCell(withIdentifier: "DataStructureCell", for: indexPath)
@@ -37,12 +35,11 @@ class DataStructureTableViewController: UIViewController, UITableViewDataSource,
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print(indexPath.row)
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailViewController = storyboard.instantiateViewController(withIdentifier:  "DetailViewController") as! DetailViewController
-        let selectedCell = DataStructEntity(title: dataStructureManipulatios.getValueInDataSource(item: indexPath.row), description: dataStructureManipulatios.descriptOfDataStructure[indexPath.row], link: dataStructureManipulatios.wikiLinks[indexPath.row])
+        let selectedEntity = DataStructEntity(title: dataStructureManipulatios.getValueInDataSource(item: indexPath.row), description: dataStructureManipulatios.descriptOfDataStructure[indexPath.row], link: dataStructureManipulatios.wikiLinks[indexPath.row])
         
-        detailViewController.srtuctureCell = selectedCell
+        detailViewController.dataCell = selectedEntity
         self.navigationController?.pushViewController(detailViewController, animated: false)
     }
     

@@ -11,13 +11,13 @@ import SafariServices
 
 class SFSafaryViewController: UIViewController, SFSafariViewControllerDelegate {
 
-    var exactURL: String?
+    var exactURL: String!
     var isClosing = false
    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        guard let url = URL(string: self.exactURL!) else {
+        guard let url = URL(string: self.exactURL) else {
             print("Error!")
             return
         }
@@ -33,7 +33,6 @@ class SFSafaryViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         isClosing = true
-        
     }
     
 }

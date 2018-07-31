@@ -9,11 +9,11 @@
 import UIKit
 
 class UIWebViewController: UIViewController, UIWebViewDelegate {
-    var exactURL: String?
+    var exactURL: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let urlRequest: URLRequest = URLRequest(url: URL(string: exactURL!)!)
+        let urlRequest: URLRequest = URLRequest(url: URL(string: exactURL)!)
         UIWebView.loadRequest(urlRequest)
     }
 
@@ -25,7 +25,6 @@ class UIWebViewController: UIViewController, UIWebViewDelegate {
     
     @IBAction func tapedBackButton(_ sender: Any) {
             self.dismiss(animated: true)
-    }
-    
+    }    
     
 }

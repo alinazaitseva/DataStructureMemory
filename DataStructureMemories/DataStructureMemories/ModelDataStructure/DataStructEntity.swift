@@ -8,28 +8,32 @@
 
 import Foundation
 
-class DataStructEntity: DataStructMemory {
-   
+class DataStructEntity: DataStructureProtocol {
+    var titleOfString: String {
+        get {
+            return title.self
+        }
+    }
+    var descriptionOfString: String {
+        get {
+            return description.self
+        }
+    }
+    var getWikiLink: String {
+        get {
+            return link.self
+        }
+    }
     private let title: String
-    private let descr: String
+    private let description: String
     private let link: String
-    
-    func titleOfString() -> String {
-        return title.self
-    }
-    
-    func descrOfString() -> String {
-        return descr.self
-    }
-    func getWikiLink() -> String {
-        return link.self
-    }
+//    let type: ATDType
     
     init(title: String, description: String, link: String) {
         self.title = title
-        self.descr = description
+        self.description = description
         self.link = link
-    }
-    
-}
+//        self.type = type
 
+    }
+}

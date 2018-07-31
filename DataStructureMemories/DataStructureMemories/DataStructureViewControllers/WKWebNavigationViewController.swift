@@ -11,7 +11,7 @@ import WebKit
 
 class WKWebNavigationViewController: UINavigationController, WKUIDelegate, WKNavigationDelegate {
   
-    var exactURL: String?
+    var exactURL: String!
 
     override func viewDidLoad() {
 

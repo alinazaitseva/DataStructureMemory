@@ -8,11 +8,9 @@
 
 import Foundation
 
-protocol DataStructureMemorySource {
-    
+protocol DataStructureSourceProtocol {
     func getValueInDataSource(item: Int) -> String
     func getAmountOfValuesInDataSorce() -> Int
-
 }
 
 

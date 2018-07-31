@@ -8,11 +8,11 @@
 
 import Foundation
 
-class DataStructMemoryList: DataStructureMemorySource{
+class DataStructMemoryList: DataStructureSourceProtocol{
  
     var listOfDataStructure: [String] {
         
-        return ["Stack","Queue","Set","Dequeue","Priority Queue","List(Array)", "MultiSet","Dictionary"]
+        return ["Stack","Queue","Set","Dequeue","Priority Queue","List", "MultiSet","Dictionary"]
     }
     
     var wikiLinks: [String] {
